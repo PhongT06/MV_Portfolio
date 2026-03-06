@@ -81,7 +81,7 @@
       <li><a href="https://github.com/DJP-SWE2526/inventory-app">Inventory App Repo</a></li>
       <li>
         <b>Purpose/Goals:</b>
-          The Inventory Application was built to recreate a modern full-stack inventory
+          <p>The Inventory Application was built to recreate a modern full-stack inventory
           management tool for an e-commerce engineering team. Beyond delivering core CRUD
           functionality, the project aimed to strengthen full-stack development fundamentals
           across React, Express, and SQLite/Sequelize. The team collaborated through GitHub
@@ -90,7 +90,7 @@
           reviews, debugging, and iterative improvement. By progressing through these tiers,
           we implemented key user workflows such as viewing, adding, editing, and deleting
           items—mirroring real engineering processes and professional full-stack development
-          practices.
+          practices.</p>
       <li>
         <b>Overview of Features:</b>
         <ul>
@@ -205,16 +205,96 @@
       <li>Screenshots and/or GIFs</li>
     </ul>
 
-    <h3>Final Bootcamp Project</h3>
+    <h3>Cashflow Guru - Final Bootcamp Project</h3>
     <h4>Must include:</h4>
     <ul>
       <li>Link to repo</li>
       <li><a href="https://github.com/PhongT06/cashflow-guru">Cashflow Guru Repo</a></li>
-      <li>Purpose/goals</li>
-      <li>Overview of features</li>
-      <li>Skills (technical and durable) this project demonstrates</li>
-      <li>How does this project demonstrate those skills?</li>
-      <li>Your takeaways from doing this project</li>
+      <li>
+        <b>Purpose/Goals:</b>
+        <p>Cashflow Guru is a modern full-stack personal finance and budgeting application designed to go beyond passive expense tracking by delivering actionable, personalized financial guidance. Traditional budgeting tools often limit themselves to logging income vs. expenses without providing clear strategies for accelerating debt payoff or hitting savings targets faster. This project addresses that gap by enabling users to input monthly income, categorize and track expenses, define debt obligations (with interest rates/balances), set savings goals, and receive tailored advice — including suggested expense reductions, optimized debt repayment sequences, and accelerated savings plans — powered by calculated projections and intelligent recommendations.</p>
+
+        <p>Built as my final Multiverse bootcamp capstone project, Cashflow Guru aimed to deepen full-stack TypeScript proficiency across React (frontend), Node.js/Express (backend), and Prisma ORM with a database backend. As a solo developer, I followed a structured, incremental development approach — starting with core data models and CRUD, progressing to user input flows, financial calculations, and finally integrating the advice-generation logic. This mirrored professional engineering workflows: defining user stories, building iteratively, handling deployment challenges, debugging cross-stack issues, and refining UX for clarity and reliability. The result is a production-ready tool that demonstrates end-to-end ownership of a meaningful real-world application while practicing clean architecture, type safety, and problem-solving under constraints.</p>
+      </li>
+      <li>
+        <b>Overview of Features:</b>
+        <ul>
+          <li><b>Tier I - User Dashboard & Data Overview:</b> Central dashboard displaying monthly income summary, total expenses, current debt balance, savings progress toward goal, and overall cash flow snapshot. Responsive layout with key metrics and visualizations for quick financial health check.</li>
+
+          <li><b>Tier II - Income & Expense Tracking (CRUD):</b> Forms to add, view, edit, and delete monthly income sources and expense entries (categorized by type, e.g., rent, food, entertainment). Real-time updates to dashboard totals; client-side and server-side validation for amounts, dates, and categories.</li>
+
+          <li><b>Tier III - Debt & Savings Goal Input:</b> Dedicated sections/forms to input debt details (balance, interest rate, minimum payment) and savings targets (amount, timeline). Data persisted via Prisma models; supports multiple debts/goals for realistic scenarios.</li>
+
+          <li><b>Tier IV - Personalized Financial Advice Generation:</b> Core differentiator — button-triggered analysis that processes user inputs (income, expenses, debts, goals) and generates tailored recommendations via integrated Google API (e.g., prioritized debt payoff strategies like avalanche/snowball method, suggested expense cuts by category, accelerated savings plans, projected timelines to goals). Advice displayed clearly with actionable steps and rationale.</li>
+
+          <li><b>Additional features:</b> TypeScript end-to-end for type safety, monorepo architecture (npm workspaces separating client/server), Prisma ORM for database schema/migrations/queries, Google API key integration for intelligent advice, basic error handling and user feedback, responsive UI built with custom CSS.</li>
+        </ul>
+      </li>
+      <li>
+        <b>Skills (technical and durable) this project demonstrates:</b>
+        <ul>
+          <li><b>Full-Stack TypeScript Development:</b> Built end-to-end features across React frontend and Node.js/Express backend using TypeScript for type-safe code throughout the application stack.</li>
+
+          <li><b>Prisma ORM & Database Design:</b> Defined relational data models (e.g., for income, expenses, debts, savings goals) with Prisma schema, handled migrations, and performed type-safe queries to persist and retrieve financial data.</li>
+
+          <li><b>RESTful API Design & Integration:</b> Implemented CRUD endpoints for financial entries and integrated external Google API to power personalized advice generation based on user inputs.</li>
+
+          <li><b>React Component Development:</b> Created reusable, typed React components for forms (income/expense/debt/savings input), dashboard views, navigation, and advice display using controlled components and hooks.</li>
+
+          <li><b>Form Handling & Validation:</b> Built client-side and server-side validation for financial inputs (amounts, dates, categories, interest rates) to ensure data integrity and reliable calculations.</li>
+
+          <li><b>State Management & UI Reactivity:</b> Managed application state (user financial data, form inputs, API responses) with React hooks and context for seamless real-time updates to summaries and advice.</li>
+
+          <li><b>External API Integration & Async Handling:</b> Connected and configured Google API key usage to generate intelligent financial recommendations, handling promises, errors, and rate limits.</li>
+
+          <li><b>Debugging & Problem-Solving:</b> Diagnosed and fixed cross-stack issues including API connectivity for advice generation, Prisma query errors, and TypeScript strictness violations.</li>
+
+          <li><b>Technical Communication & Documentation:</b> Organized code clearly and used descriptive commit messages to document changes, integrations, and fixes for future maintainability.</li>
+
+          <li><b>Incremental Delivery & Adaptability:</b> Progressed from backend setup and Prisma models → frontend forms → API integration → deployment fixes, adapting to technical hurdles while delivering a functional capstone.</li>
+        </ul>
+      </li>
+      <li>
+        <b>How does this project demonstrate those skills?</b>
+        <ul>
+          <li>
+            <b>Situation:</b> As my final Multiverse bootcamp project, I set out to build a full-stack personal finance application that addresses limitations in traditional budgeting tools by providing personalized, actionable guidance for debt payoff and savings acceleration. The project required reliable data persistence, user-friendly input flows, complex financial calculations, external API integration for intelligent advice, and production deployment — all while using modern TypeScript tooling in a solo context.
+          </li>
+
+          <li>
+            <b>Task:</b> My responsibility was end-to-end ownership: design the database schema with Prisma, build RESTful APIs for CRUD on financial data, create React frontend components for input and visualization, integrate Google API to generate tailored advice from user inputs, manage state and validation across the stack.
+          </li>
+
+          <li>
+            <b>Action:</b>
+            <ul>
+              <li>Designed Prisma schema and models to store user financial data (income, expenses, debts with interest rates, savings goals), implemented type-safe migrations and queries for persistence and retrieval.</li>
+              <li>Built Express backend routes and controllers for CRUD operations on financial entries, including validation and business logic for calculations (e.g., cash flow summaries, debt payoff projections).</li>
+              <li>Developed React components (e.g., Tracker for expense/income forms, HomePage dashboard, Auth for login flows, Navbar for navigation) using TypeScript, controlled components, and React hooks for reactive UI updates.</li>
+              <li>Integrated Google API key to enable personalized advice generation (processing user financial inputs to produce recommendations like expense cuts, prioritized debt repayment, and accelerated savings timelines), handling async API calls, error cases, and secure key management.</li>
+              <li>Implemented client-side and server-side validation for inputs (e.g., positive amounts, valid dates, reasonable interest rates) to ensure data integrity and prevent invalid calculations/advice.</li>
+              <li>Debugged cross-stack challenges (API connectivity for advice, Prisma query issues, TypeScript errors) through targeted commits and self-reviewed merges.</li>
+            </ul>
+          </li>
+
+          <li>
+            <b>Result:</b> Cashflow Guru is now a functional full-stack application that reliably tracks user finances, generates intelligent personalized advice via Google API integration, and provides a responsive, intuitive interface. My contributions delivered a complete end-to-end solution from schema design to API integration complexities. The iterative process strengthened code quality, maintainability, and my ability to ship a meaningful, user-focused tool solo — demonstrating strong full-stack engineering, problem-solving, and professional practices suitable for real engineering teams.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Takeaways:</b>
+        <ul>
+          <li>Deepened full-stack TypeScript proficiency by building an entire application with strict typing across frontend (React), backend (Node/Express), and database layer (Prisma), reinforcing the value of type safety in preventing runtime errors and improving developer confidence.</li>
+          <li>Gained hands-on mastery of Prisma ORM as a modern, type-safe alternative to traditional ORMs, learning schema design, migrations, relations, and efficient querying in a real financial data context.</li>
+          <li>Strengthened ability to integrate external APIs (Google API for intelligent advice generation), including secure key management, async handling, error resilience, and processing structured outputs to deliver meaningful user value.</li>
+          <li>Enhanced debugging and problem-solving across the full stack by tackling interconnected issues (API connectivity for advice, Prisma query logic, TypeScript strict mode violations) and turning blockers into learning opportunities.</li>
+          <li>Built confidence in end-to-end solo project ownership: from initial setup and schema design to polished frontend UX, and advice logic, proving I can deliver a complete, user-focused product independently.</li>
+          <li>Reinforced the power of incremental delivery even in solo work, self-reviewed PRs, and small, focused commits to maintain momentum, code quality, and clear history.</li>
+          <li>Developed a stronger appreciation for user-centered design: creating intuitive forms, real-time feedback, and clear personalized advice improved usability and highlighted how technical choices directly impact user experience and trust in financial tools.</li>
+          <li>Recognized the unique challenge and reward of building guidance-driven features (beyond basic CRUD) — combining math/logic with API-powered intelligence to solve real personal finance pain points, which deepened my motivation for impactful software.</li>
+        </ul>
+      </li>
     </ul>
     <h4>Could include:</h4>
     <ul>
