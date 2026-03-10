@@ -308,12 +308,255 @@
     <ul>
       <li>Link to repo</li>
       <li><a href="https://github.com/FairyOddTeam/The-Wish-Granting-API">The Wish Granting API Repo</a></li>
-      <li>Purpose/goals</li>
-      <li>Overview of features</li>
-      <li>Your specific contribution if in a team</li>
-      <li>Skills (technical and durable) this project demonstrates</li>
-      <li>How does this project demonstrate those skills?</li>
-      <li>Your takeaways from doing this project</li>
+      <li>
+        <b>Purpose/Goals:</b>
+        <p>
+          The Wish Granting API was developed as our Back-End Module project to practice building a well-structured, fully documented RESTful API using Node.js, Express, and a relational database. The goal of the project was to design and implement a backend service that allows users to create, view, update, and delete “wishes” through clearly defined endpoints while applying best practices in routing, validation, error handling, and asynchronous database operations.
+        </p>
+
+        <p>
+          This project focused on strengthening core back-end engineering fundamentals — including data modeling, controller logic, layered architecture, and writing modular, maintainable code. Our team also emphasized collaboration through GitHub workflows, PR reviews, and iterative improvements. By completing this API, we learned how to design scalable endpoints, manage application state on the server, and ensure reliable behavior through consistent HTTP responses and validation patterns.
+        </p>
+      </li>
+
+      <li>
+        <b>Overview of Features:</b>
+        <ul>
+
+          <li><b>User Authentication (Local + Google OAuth 2.0):</b>
+            Supports two authentication flows: traditional username/password login with bcrypt hashing, and Google OAuth 2.0 sign-in using Passport and the Google Auth Library. Both authentication flows issue a signed JWT used to access protected API routes.
+          </li>
+
+          <li><b>JWT-Protected Endpoints:</b>
+            All core resource routes (Users, Wishes, Fairies) are protected by JWT middleware. Authenticated users receive access to their own data, while admins receive elevated privileges.
+          </li>
+
+          <li><b>User Registration & Login:</b>
+            Local signup endpoint creates new users with hashed passwords; login verifies credentials and returns a JWT. A dedicated <code>/auth/google</code> route handles Google provider login and auto-creates users on first OAuth sign-in.
+          </li>
+
+          <li><b>CRUD for Wishes:</b>
+            Users can create, view, edit, and delete their own wishes. Admins can view and manage all wishes. Each wish includes text, category (fun/practical/chaotic), associated user, timestamp fields, and an optional generated outcome.
+          </li>
+
+          <li><b>Fairy Management (Admin-Only):</b>
+            Full CRUD operations for Fairies, protected by <code>requireAdmin</code> middleware. Fairies include name, specialty, status, description, and a linked user_id, and return joined User data in responses.
+          </li>
+
+          <li><b>Role-Based Authorization:</b>
+            Access control enforcing:
+            <ul>
+              <li>Basic users see and modify only their own wishes.</li>
+              <li>Admins can view, edit, or delete any user, wish, or fairy.</li>
+              <li>Error responses clearly distinguish unauthorized (401), forbidden (403), and invalid input (400).</li>
+            </ul>
+          </li>
+
+          <li><b>Associated Data Retrieval:</b>
+            Wish and Fairy endpoints return relational data by joining associated User records, improving API usability for frontend integrations.
+          </li>
+
+          <li><b>Gemini AI Wish Outcome Generation:</b>
+            When granting a wish, the API optionally calls Google Gemini (via <code>fetch</code> + API key) to produce an ironic, humorous magical outcome in the style of The Fairly OddParents, storing the generated text as the wish's <code>outcome</code>.
+          </li>
+
+          <li><b>Comprehensive Validation & Error Handling:</b>
+            Input validation for IDs, wish text length, category values, required fields, and Sequelize model validation errors. Central error handling middleware returns structured, consistent error messages for debugging and client clarity.
+          </li>
+
+          <li><b>Testing with Jest + Supertest:</b>
+            Automated tests cover authentication flows, CRUD operations, error scenarios (404, 401, 403, 400), and database isolation. Gemini calls are mocked to ensure test consistency and speed.
+          </li>
+
+          <li><b>Database via Sequelize + SQLite:</b>
+            Includes relational models (User, Wish, Fairy), model associations, validation rules, lifecycle hooks (password hashing), and deterministic test DB resets.
+          </li>
+
+          <li><b>Tier-Based Feature Delivery:</b>
+            All features were built incrementally following the module's tier progression:
+            <ul>
+              <li>CRUD basics (Tier 1)</li>
+              <li>Password hashing + OAuth (Tiers 2-3)</li>
+              <li>Authorization + JWT protection (Tier 4)</li>
+              <li>Associated users in responses (Tier 5)</li>
+              <li>Admin role + elevated access (Tier 6)</li>
+              <li>Gemini integration + bonus endpoints (Bonus)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <b>Your specific contribution in the team:</b>
+        <ul>
+
+          <li><b>Implemented full CRUD functionality for Wishes:</b> 
+            Built the Wish model, created the RESTful routes, added input validation, 
+            implemented category support (fun/practical/chaotic), 
+            and handled relational lookups to include the associated User in responses.
+          </li>
+
+          <li><b>Added category-based filtering for wishes:</b>
+            Enhanced the GET /wish endpoint to support category filtering, user-based 
+            filtering, and safe validation for invalid categories.
+          </li>
+
+          <li><b>Implemented Fairy CRUD:</b>
+            Built the full CRUD routes and the Fairy Sequelize model, including 
+            validation rules, associations to Users, and admin-only protections using 
+            <code>requireAdmin</code> middleware.
+          </li>
+
+          <li><b>Developed the frontend API client (WishAPI class):</b>
+            Created a reusable API wrapper that handles authentication headers, 
+            token storage, error handling, parsing JSON responses, and exposes 
+            helper methods (login, getWishes, getWish, createWish, updateWish, 
+            grantWish, etc.).
+          </li>
+
+          <li><b>Integrated frontend with backend authentication:</b>
+            Implemented JWT-based login/logout, user persistence in localStorage, 
+            session expiration handling, and user role detection for showing admin views.
+          </li>
+
+          <li><b>Built the Dashboard, Wishes, and Fairies frontend pages:</b>
+            Wrote logic to load user info, fetch statistics, render wishes/fairies 
+            dynamically, and control UI behavior based on user roles (e.g., only 
+            showing admin forms to admins).
+          </li>
+
+          <li><b>Connected the full stack end-to-end:</b>
+            Implemented all fetch calls, wired up form handlers, added filtering 
+            options, and ensured the client correctly consumed protected endpoints 
+            using JWT authentication.
+          </li>
+
+          <li><b>Performed major refactors & improvements:</b>
+            Updated Wish routes to support category validation, added improved 
+            filtering logic, enhanced error messages, and aligned response structures 
+            with frontend needs.
+          </li>
+
+          <li><b>Provided code review contributions:</b>
+            Opened several feature-specific PRs (Wishes CRUD, Fairies CRUD, 
+            Wish categorization/filtering, Dashboard/wishes/fairies connection), 
+            incorporating review feedback and improving code consistency.
+          </li>
+
+          <li><b>Strengthened user experience:</b>
+            Improved page behavior with loading states, error messages, 
+            real-time updates after create/edit/delete operations, and cleaner UI 
+            integration for magical “wish” and “fairy” themes.
+          </li>
+
+        </ul>
+      </li>
+      <li>
+        <b>Skills (technical and durable) this project demonstrates:</b>
+        <ul>
+          <li><b>Full-Stack Development:</b> Implemented features across the Express/Sequelize backend and a vanilla JS frontend (dashboard, wishes, fairies) with authenticated API calls and role-aware UI behavior.</li>
+
+          <li><b>RESTful API Design:</b> Built and refined CRUD endpoints for <i>Wishes</i> and <i>Fairies</i>, including list/detail routes, PATCH updates, and structured JSON responses with associated <i>User</i> data.</li>
+
+          <li><b>Authentication & Authorization:</b> Implemented local login (bcrypt-hashed passwords), Google OAuth → JWT issuance, and JWT-protected routes; enforced RBAC with admin-only fairy management and user-scoped access for wishes.</li>
+
+          <li><b>Sequelize Modeling & Data Integrity:</b> Defined and validated models (User, Wish, Fairy), set enums (e.g., wish <code>category</code>: fun/practical/chaotic; fairy <code>status</code>: available/busy), and added associations to return joined user info.</li>
+
+          <li><b>Validation & Error Handling:</b> Added robust input checks (IDs, required fields, enums, lengths) and clear 400/401/403/404 responses; standardized error payloads to improve client-side handling.</li>
+
+          <li><b>Frontend Integration & API Client:</b> Built a reusable <code>WishAPI</code> class handling base URL, auth headers, token persistence, response parsing, and helper methods (login, getWishes, create/update/grant, etc.).</li>
+
+          <li><b>AI Integration:</b> Wired a PATCH “grant” flow that optionally calls Gemini to generate humorous outcomes, persists text to <code>outcome</code>, and stamps <code>granted_at</code>.</li>
+
+          <li><b>Collaboration:</b> Delivered focused PRs (Wishes CRUD, Fairies CRUD, wish categorization/filtering, frontend wiring), incorporated feedback, and maintained consistent response shapes.</li>
+
+          <li><b>Incremental Delivery:</b> Executed a tier-based plan—from CRUD (Tier 1) to auth/registration (Tiers 2-3), authorization (Tier 4), associations (Tier 5), admin role (Tier 6), and bonus AI/testing features.</li>
+
+          <li><b>Problem-Solving & Debugging:</b> Resolved issues across the stack (token handling, category validation, role checks, UI state updates) using logs, targeted tests, and iterative fixes.</li>
+
+          <li><b>Technical Communication:</b> Documented intent and impact through descriptive commit messages and PRs; aligned backend contracts with frontend needs for smooth integration.</li>
+        </ul>
+      </li>
+
+      <li>
+        <b>How does this project demonstrate those skills?</b>
+        <ul>
+
+          <li>
+            <b>Situation:</b>  
+            Our team was tasked with building a secure, feature-rich backend API that supports 
+            user authentication, role-based authorization, CRUD operations for multiple 
+            resources (Wishes, Fairies, Users), and optional AI-generated wish outcomes. 
+            The system needed to serve both internal testers and an in-progress frontend client, 
+            requiring predictable endpoints, strong validation, and consistent behavior across 
+            protected routes.
+          </li>
+
+          <li>
+            <b>Task:</b>  
+            My responsibility was to implement major backend features—including full CRUD for 
+            Wishes and Fairies, category filtering, relational lookups, and validation—and to 
+            build the frontend integration layer that authenticated users, requested data, and 
+            rendered it in the dashboard, wish pages, and fairy management screens.
+          </li>
+
+          <li>
+            <b>Action:</b>
+            <ul>
+              <li>Implemented the complete Wishes CRUD flow, including input validation, category enums, 
+              error responses, user-specific filtering, and relational joins to return associated 
+              User data.</li>
+
+              <li>Built the Fairies CRUD feature (model + routes), including admin-only route protection, 
+              validation rules, user lookups, and structured responses.</li>
+
+              <li>Enhanced Wish endpoints with category filtering (<code>?category=fun/practical/chaotic</code>) 
+              and implemented request validation for invalid values.</li>
+
+              <li>Developed the <code>WishAPI</code> frontend utility class to manage base URLs, 
+              authentication headers, fetch requests, JSON parsing, and error handling, enabling 
+              consistent API integration across pages.</li>
+
+              <li>Implemented frontend logic for the dashboard, wishes page, and fairies page, including 
+              dynamic rendering, user role detection, admin-only UI controls, and real-time updates 
+              after CRUD operations.</li>
+
+              <li>Created end-to-end flows for login/logout, JWT persistence, and automatic logout on 
+              token expiration using the API client's response handlers.</li>
+
+              <li>Delivered feature-focused PRs (Wishes CRUD, Fairies CRUD, Wish categorization/filtering, 
+              frontend wiring) to maintain consistency and quality across the codebase.</li>
+            </ul>
+          </li>
+
+          <li>
+            <b>Result:</b>  
+            The Wish Granting API now provides a secure, stable, and role-aware backend with fully 
+            functional CRUD operations for Wishes and Fairies, validation throughout the stack, 
+            and seamless integration with the frontend client. My contributions enabled the 
+            end-to-end workflows: users can sign in, manage wishes, view filtered lists, interact 
+            with fairies, and access a functioning dashboard. The project demonstrates strong 
+            engineering practices in API design, security, full-stack integration, and 
+            collaborative delivery, while also laying the groundwork for bonus features like 
+            Gemini-driven wish outcomes.
+          </li>
+
+        </ul>
+      </li>
+      <li>
+        <b>Takeaways:</b>
+        <ul>
+          <li>Strengthened end-to-end API development by delivering secure CRUD for Wishes/Fairies with clear HTTP contracts and relational responses.</li>
+          <li>Gained practical experience implementing authentication/authorization patterns.</li>
+          <li>Improved Sequelize modeling and validation discipline with enums, associations, and helpful 4xx error semantics.</li>
+          <li>Enhanced full-stack integration skills by building a reusable frontend API client (auth headers, token storage, error handling) and wiring dashboards/pages to protected endpoints.</li>
+          <li>Sharpened debugging techniques across the stack—token lifecycle issues, category validation, role checks, and UI state updates.</li>
+          <li>Built confidence with automated testing (Jest + Supertest), database isolation, and mocking external services for deterministic runs.</li>
+          <li>Reinforced incremental delivery via tier-based milestones, keeping scope focused and the codebase stable as features expanded.</li>
+          <li>Developed comfort integrating AI services (Gemini) behind safe server flows, persisting generated outcomes and handling failures gracefully.</li>
+          <li>Strengthened collaboration through focused PRs, descriptive commit messages, and aligning backend contracts with frontend needs.</li>
+        </ul>
+      </li>
     </ul>
     <h4>Could include:</h4>
     <ul>
