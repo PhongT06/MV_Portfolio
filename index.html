@@ -43,7 +43,7 @@
 <ul>
   <li><strong>Primary Focus</strong>: Predominantly frontend development — creating intuitive, responsive user interfaces for technicians in the field, ensuring seamless navigation, real-time data display, and mobile-optimized experiences on devices used in real-world service scenarios.</li>
   <li><strong>Recent Exposure</strong>: I've recently expanded into backend work, collaborating on API integrations, data handling, and server-side logic to support features like work order management, inventory checks, and secure data syncing between mobile clients and HP's backend systems.</li>
-  <li><strong>Team Collaboration</strong>: Worked closely with cross-functional engineers (frontend, backend, QA, product owners) in an agile environment, participating in sprint planning, code reviews, and stand-ups to deliver iterative improvements.</li>
+  <li><strong>Team Collaboration</strong>: Worked closely with cross-functional engineers (Figma designer, frontend, backend, QA, product owners) in an agile environment, participating in sprint planning, code reviews, and stand-ups to deliver iterative improvements.</li>
   <li><strong>Impact</strong>: Contributed to enhancing the reliability and usability of the app, reducing friction for field teams and supporting faster resolution times—directly aligning with HP's goals for efficient global field service operations.</li>
 </ul>
 
@@ -61,7 +61,7 @@
     <strong>Production Deployments & Immediate Real-World Impact</strong>: At the end of each development lifecycle and sprint cycle, after rigorous testing (unit, integration, QA, and user acceptance), my code contribution gets merged to production. These changes go live directly into the app, meaning my frontend enhancements, bug fixes, and feature iterations have immediate, tangible effects for field technicians—improving their daily workflows, reducing friction, and enabling faster service resolution without delays.
   </li>
   <li>
-    <strong>Proudest Contribution: Compact Work Orders View</strong>: One of my most significant impacts was designing and implementing a <strong>compact view for work orders</strong>. This streamlined layout condenses essential information (e.g., status, priority, location, key details) into a more glanceable, mobile-optimized format, making it easier for technicians to scan and act on assignments quickly in the field. After feedback, testing, and iteration, this view was adopted as the <strong>default view</strong> across the FSM (Field Service Management) app. It has become a core part of the technician experience, helping reduce cognitive load and speed up job handling—directly supporting HP's goal of efficient, reliable field operations.
+    <strong>Proudest Contribution: Simplified Agenda View</strong>: One of my most significant impacts was designing and implementing a <strong>compact view for work orders</strong>. This streamlined layout condenses essential information (e.g., status, priority, location, key details) into a more glanceable, mobile-optimized format, making it easier for technicians to scan and act on assignments quickly in the field. After feedback, testing, and iteration, this view was adopted as the <strong>default view</strong> across the FSM (Field Service Management) app. It has become a core part of the technician experience, helping reduce cognitive load and speed up job handling—directly supporting HP's goal of efficient, reliable field operations.
   </li>
   <li>
     <strong>Broader Team & Product Benefits</strong>: Through consistent PRs, demos, code reviews, and collaboration, I've helped enhance overall app stability, responsiveness, and user satisfaction. These improvements contribute to better service delivery, potentially reducing downtime and increasing customer satisfaction for HP's global field service ecosystem.
@@ -570,12 +570,254 @@
     <ul>
       <li>Link to repo</li>
       <li><a href="https://github.com/DustinAndPhongFrontend/frontend-project">Medieval Times Repo</a></li>
-      <li>Purpose/goals</li>
-      <li>Overview of features</li>
-      <li>Your specific contribution if in a team</li>
-      <li>Skills (technical and durable) this project demonstrates</li>
-      <li>How does this project demonstrate those skills?</li>
-      <li>Your takeaways from doing this project</li>
+      <li>
+        <b>Purpose/Goals:</b>
+        <p>
+          Medieval Times was developed as our Front-End Module project to practice building a rich, interactive, and fully modern user interface using Next.js, TypeScript, and a variety of advanced front-end tools. 
+          The goal of the project was to create an immersive RPG-style experience — complete with drag-and-drop inventory management, equippable items, animated quest flows, character stats, and persistent game state — 
+          while applying professional engineering best practices in component design, state architecture, responsiveness, and automated testing.
+        </p>
+
+        <p>
+          This project focused heavily on strengthening core front-end engineering fundamentals — including building reusable UI components, managing global state through Context + Reducer patterns, 
+          implementing drag-and-drop behaviors with <code>@dnd-kit</code>, designing responsive layouts with TailwindCSS, and adding animations through React Spring. We also incorporated a structured JSON data model 
+          for items and quests, enabling realistic content-driven interactions. To ensure long-term maintainability and reliability, we added thorough unit tests using Vitest and end-to-end tests using Playwright, 
+          validating critical user flows such as equipping items, accepting quests, and completing missions. By completing this project, we developed the ability to build a polished, highly interactive application that 
+          mirrors real-world front-end product development practices.
+        </p>
+      </li>
+      <li>
+        <b>Overview of Features:</b>
+        <ul>
+          <li><b>Drag-and-Drop Inventory & Equipment System:</b>
+            Interactive inventory grid and equipment slots built with <code>@dnd-kit</code>, supporting mouse, touch, and keyboard sensors for accessibility. Items can be dragged from inventory to matching equipment slots with acceptance rules and immediate state updates.
+          </li>
+
+          <li><b>Equipment Slot Validation & Feedback:</b>
+            Each slot declares accepted item types (e.g., <i>weapon</i>, <i>helmet</i>, <i>armor</i>, <i>boots</i>). Invalid drops are rejected with clear visual cues and sound effects; valid drops trigger equip actions and success audio for delightful UX.
+          </li>
+
+          <li><b>Persistent Global Game State:</b>
+            App-wide state managed via Context + Reducer (username, class, inventory, equipped items, stats, gold, quests). State is saved to <code>localStorage</code> so progression, inventory, and quest logs persist across reloads.
+          </li>
+
+          <li><b>Quest Message Board (Dynamic Rotation):</b>
+            A “Message Board” page displays a rotating selection of quests sourced from JSON. Accepted quests are filtered out and instantly replaced with new ones; users can flip cards for details, accept, or decline with dedicated actions.
+          </li>
+
+          <li><b>Quest Log with Active/Completed Tabs:</b>
+            A “Quest Log” page organizes quests into “Active” and “Completed” tabs with responsive cards, mobile-friendly layouts, and a detail modal. Active quests include a one-click “Complete Quest” flow to advance progression.
+          </li>
+
+          <li><b>Quest Completion Engine (Rewards, XP, Leveling):</b>
+            Completing a quest processes rewards by parsing strings like “100 gold, Dragon Scale Armor.” Gold is added, items are inserted into the first available inventory slots, and XP triggers level-ups with stat increases and updated health/mana.
+          </li>
+
+          <li><b>Typed Items & Quests via JSON Data:</b>
+            Items (weapons, armor, helmets, boots, shields, accessories, materials, consumables) and quests are defined in structured JSON. Helpers map reward text → item IDs and pull full item definitions for consistent, type-safe usage in the UI.
+          </li>
+
+          <li><b>Character Stats & Equipment Bonuses:</b>
+            Real-time stat panel displays base stats and derived totals from equipped items (e.g., Intelligence, Strength, Dexterity, Luck, Max Health/Mana). Level-ups apply incremental increases and optionally restore health/mana.
+          </li>
+
+          <li><b>Responsive Header & Navigation with Badges:</b>
+            Animated site header (React Spring) with desktop and mobile navigation, a live quest badge showing active quest count, and a gold counter. Includes a mobile hamburger menu with auto-close on route changes and resize events.
+          </li>
+
+          <li><b>Animations & Theming:</b>
+            React Spring powers subtle entrance and transition animations. The UI uses CSS Modules and Tailwind-like utility classes for a cohesive medieval theme, including parchment textures and stylized modals.
+          </li>
+
+          <li><b>Accessibility & Multi-Input Support:</b>
+            Drag-and-drop supports mouse, touch, and keyboard sensors; droppable zones provide hover states; modal interactions support keyboard navigation and click-outside to close; ARIA labels for navigational controls where applicable.
+          </li>
+
+          <li><b>Testing Strategy (Vitest + Playwright):</b>
+            Unit/integration tests validate reducers, parsing utilities (e.g., reward parsing), and component behavior. End-to-end tests cover core user flows: equipping items, reordering inventory, accepting/declining quests, and completing quests.
+          </li>
+
+          <li><b>Developer Experience & Tooling:</b>
+            Next.js App Router with client components, TypeScript for type safety, ESLint for consistency, and quick-start scripts:
+            <code>npm run dev</code>, <code>npm run test</code>, <code>npm run test-e2e</code>, and <code>playwright codegen</code> for rapid E2E authoring.
+          </li>
+
+          <li><b>Audio Feedback & Polish:</b>
+            Subtle sound cues on equip/error actions (e.g., success chime, error tone) using hosted audio assets to reinforce feedback loops and enhance overall game feel.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Your specific contribution in the team:</b>
+        <ul>
+          <li><b>Quest System Foundation:</b> 
+            Bootstrapped the <i>Message Board</i> and <i>Quest Log</i> features:
+            added <code>quests.json</code> content set, built rotating quest display with card flip details,
+            wired accept/decline actions, and filtered/replace logic to prevent duplicates in the board.
+            <br />
+          </li>
+
+          <li><b>Quest Log UI & Navigation Enhancements:</b>
+            Implemented the <i>Quest Log</i> page with Active/Completed tabs, responsive card grid, and modal view; 
+            updated the header/navbar (desktop + mobile menu, active route styles, gold counter, quest badge).
+            <br />
+          </li>
+
+          <li><b>Quest Reward Engine & Data Model:</b>
+            Introduced an items database (typed JSON for weapons/armor/boots/accessories/materials/consumables) and 
+            standardized the quest reward string format (e.g., “100 gold, Dragon Scale Armor”). 
+            Built reward parsing + item lookup utilities and integrated them into the quest completion flow 
+            to add gold, inject items into the first available inventory slot, and trigger XP/level logic.
+            <br />
+          </li>
+
+          <li><b>Completion Flow & UX Polish:</b>
+            Implemented the animated <i>Quest Completion</i> modal with staggered reveals (gold, items, level-up, stats),
+            hooked into reducer actions (<code>FINISH_QUEST</code>, <code>SHOW/HIDE_COMPLETION_RESULT</code>), and 
+            ensured persistence via <code>localStorage</code>. Fixed content issues (e.g., item naming mismatch) to keep
+            rewards reliable end-to-end.
+            <br />
+          </li>
+
+          <li><b>Integration & Code Health:</b>
+            Merged feature branches into <code>main</code>, resolved conflicts, and maintained consistency across 
+            the app's context/reducer, header/nav, and quest components. Ensured changes passed checks prior to merge.
+            <br />
+          </li>
+
+          <li><b>Testing & Developer Experience:</b>
+            Set up and contributed to the testing workflow: <b>Vitest</b> for reducers/utilities (e.g., reward parsing, 
+            inventory mutations) and <b>Playwright</b> for E2E coverage (equip item, invalid drop handling, accept quest, 
+            complete quest → rewards applied). Added helpful scripts for local runs and interactive E2E authoring.
+            <br />
+            <i>Scripts:</i> <code>npm run test</code>, <code>npm run test-e2e</code>, <code>npm run test-e2e-interactive</code>, <code>npm run dev</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <b>Skills (technical and durable) this project demonstrates:</b>
+        <ul>
+
+          <li><b>Front-End Architecture & Component Design:</b>
+            Built reusable, type-safe React components for inventory, equipment, quests, stats, navigation, and modals using the Next.js App Router. Demonstrated ability to break down complex UI systems into maintainable, testable modules.
+          </li>
+
+          <li><b>Global State Management (Context + Reducer):</b>
+            Implemented a centralized game state including inventory, equipped items, stats, gold, accepted quests, completed quests, and progression. Applied reducer patterns for predictable updates, immutability, and scalable action handling.
+          </li>
+
+          <li><b>Drag-and-Drop Engineering:</b>
+            Utilized <code>@dnd-kit/core</code> to implement accessible drag-and-drop interactions with mouse, touch, and keyboard sensors. Added slot acceptance rules, hover states, and visual/audio feedback to reinforce intuitive user actions.
+          </li>
+
+          <li><b>Persistent Application State:</b>
+            Used <code>localStorage</code> to persist the entire game state across refreshes, creating a “save file” experience. Wrapped the reducer with a persistence layer to serialize and rehydrate state on load.
+          </li>
+
+          <li><b>Data Modeling & Parsing:</b>
+            Designed structured JSON models for all items and quests (over 100+ entries). Built utilities to parse textual quest rewards (e.g., “100 gold, Dragon Scale Armor”), resolve item IDs, and validate reward data programmatically.
+          </li>
+
+          <li><b>Game Logic & Systems Thinking:</b>
+            Implemented an XP and level-up system, stat progression, inventory reward distribution, quest acceptance filters, and item-based stat modifiers. Ensured all systems worked together cohesively across state boundaries.
+          </li>
+
+          <li><b>Responsive & Accessible UI:</b>
+            Used TailwindCSS, CSS Modules, and responsive design helpers to support desktop, tablet, and mobile layouts. Added keyboard navigation support, ARIA labels, accessible modals, and mobile-optimized navigation flows.
+          </li>
+
+          <li><b>Animation & Interaction Design:</b>
+            Used React Spring for entrance animations, menu transitions, and staged reward reveal effects in the Quest Completion modal, creating a polished and engaging user experience.
+          </li>
+
+          <li><b>Testing (Unit, Integration, E2E):</b>
+            Wrote unit and integration tests with Vitest for reducers, parsing utilities, and components. Developed Playwright end-to-end tests to validate core flows (item equip, quest accept/decline, quest completion, stat progression).
+          </li>
+
+          <li><b>Version Control & Collaboration:</b>
+            Contributed feature-specific commits and PRs for the message board, quest log, reward system, items database, completion modal, and navbar updates. Merged branches, resolved conflicts, and aligned code styles across the project.
+          </li>
+
+          <li><b>Problem-Solving & Debugging:</b>
+            Troubleshot and fixed issues related to drag data, reward parsing mismatches, item lookup errors, state rehydration, and hydration warnings in Next.js. Improved reliability and consistency through iterative refinements.
+          </li>
+
+          <li><b>Technical Communication:</b>
+            Authored clear commit messages, PR descriptions, and code comments explaining logic, file structures, and architectural decisions. Ensured teammates could quickly understand changes and integrate them into the project.
+          </li>
+
+        </ul>
+      </li>
+      <li>
+        <b>How does this project demonstrate those skills?</b>
+        <ul>
+
+          <li>
+            <b>Situation:</b>
+            Our team was tasked with building a fully interactive, RPG-style front-end application that combined inventory management, quest progression, character statistics, animations, and persistent state — all within the constraints of a modern Next.js and TypeScript environment. The experience needed to feel cohesive and game-like, while still using professional engineering practices such as modular components, predictable state updates, and automated testing.
+          </li>
+
+          <li>
+            <b>Task:</b>
+            My responsibility was to architect and implement several of the most complex systems in the application, including the quest board, quest log, quest reward engine, items database, and the complete quest completion flow. I also updated global navigation, integrated state persistence, and ensured seamless interaction between game systems (inventory, rewards, stats, and level progression). Additionally, I owned multiple feature branches, contributed PRs, resolved merge conflicts, and enhanced UX with animations, and responsive layouts.
+          </li>
+
+          <li>
+            <b>Action:</b>
+            <ul>
+              <li>
+                Built the <b>Message Board</b> system with quest rotation, card-flip UI, accept/decline workflows, filtering of accepted quests, and auto-replacement of taken quests using structured JSON data.
+              </li>
+              <li>
+                Designed and implemented the <b>Quest Log</b> with Active/Completed tabs, quest detail modal, completion actions, responsive grids, and mobile-friendly adaptations.
+              </li>
+              <li>
+                Created a comprehensive <b>items database</b> (weapons, armor, accessories, materials, consumables) and built utilities to parse quest reward strings (e.g., "100 gold, Dragon Scale Armor") into gold values and item IDs.
+              </li>
+              <li>
+                Developed the <b>Quest Completion Engine</b> to apply gold rewards, add rewarded items to inventory, calculate XP gains, process multiple level-ups, and return updated stats, inventory, and quest metadata.
+              </li>
+              <li>
+                Implemented the <b>animated quest completion modal</b> using React Spring, with staged reveal effects for rewards, items, and level-up changes, tied directly into reducer logic.
+              </li>
+              <li>
+                Updated the <b>header/navbar</b> with responsive design, an animated title, route-based active link states, a live quest badge counter, mobile menu handling, and a gold display synced to game state.
+              </li>
+              <li>
+                Contributed strongly to <b>global state architecture</b> by enhancing the reducer, adding new actions, ensuring idempotent updates, and wrapping it with persistent localStorage serialization.
+              </li>
+              <li>
+                Added <b>Vitest</b> tests for reducers and reward parsing utilities, and created <b>Playwright E2E tests</b> covering inventory equip flows, quest acceptance, quest completion rewards, level-up logic, and UI state transitions.
+              </li>
+              <li>
+                Authored multiple feature branches and PRs such as:
+                <i>"Added message board," "Added quests.json," "Updated message board with CSS styling," 
+                “Added quest log,” “Updated header/navbar,” “Added items database,” 
+                “Updated quest reward structure,” “Added quest completion pop up.”</i>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <b>Result:</b>
+            The final application delivered a polished, immersive experience blending RPG game mechanics with modern front-end engineering. Users can equip items via drag-and-drop, accept and complete quests, gain rewards and levels, view animated progression, and maintain persistent state across sessions. My contributions were central to enabling these core systems — from quest data modeling and reward processing to UI/UX polish and navigation — resulting in a cohesive, feature-rich application. This project demonstrated my ability to architect complex front-end systems, build production-quality user experiences, and contribute collaboratively in a multi-feature codebase using professional engineering workflows.
+          </li>
+
+        </ul>
+      </li>
+      <li>
+        <b>Takeaways:</b>
+        <ul>
+          <li>Strengthened front-end architecture skills through building a multi-component system using reducers, context, typed models, and coordinated drag-and-drop interactions.</li>
+          <li>Gained practical experience designing interconnected UI logic by implementing quest flows, reward handling, inventory updates, and stat progression in a predictable and scalable way.</li>
+          <li>Improved UX design discipline by adding responsive layouts, hover states, sound cues, animations, and clear feedback loops to guide user interaction.</li>
+          <li>Learned to build for accessibility and responsiveness by supporting keyboard-based drag-and-drop, mobile navigation patterns, and inclusive modal interactions.</li>
+          <li>Strengthened testing habits with both unit tests (Vitest) and full user-flow tests (Playwright), improving confidence in state-heavy interactive features.</li>
+          <li>Developed best practices for data-driven UI development by structuring item and quest data in JSON, parsing reward strings, and separating domain logic from presentation.</li>
+          <li>Enhanced collaboration and Git workflow skills by working across multiple feature branches, resolving merge conflicts, iterating on PRs, and maintaining consistent code quality.</li>
+          <li>Built confidence creating polished, interactive interfaces by blending engineering patterns with thoughtful design choices that made the application feel cohesive and engaging.</li>
+        </ul>
+      </li>
     </ul>
     <h4>Could include:</h4>
     <ul>
@@ -589,12 +831,306 @@
     <ul>
       <li>Link to repo</li>
       <li><a href="https://github.com/Team-PlanPilot/PlanPilot">Plan Pilot Repo</a></li>
-      <li>Purpose/goals</li>
-      <li>Overview of features</li>
-      <li>Your specific contribution if in a team</li>
-      <li>Skills (technical and durable) this project demonstrates</li>
-      <li>How does this project demonstrate those skills?</li>
-      <li>Your takeaways from doing this project</li>
+      <li>
+        <b>Purpose/Goals:</b>
+        <p>
+          Plan Pilot was developed as our Deployment Module project to build, deploy, and integrate a production-ready full-stack application supporting real-world team collaboration workflows. The goal was to design a scalable backend using Node.js, Express, PostgreSQL, and Sequelize—paired with a responsive React frontend—to enable teams to create projects (teams), invite collaborators via unique access codes, manage tasks, and generate AI-assisted project plans. The focus was on cloud deployment readiness, environment configuration, and delivering a robust API that a real client can consume reliably.
+        </p>
+
+        <p>
+          From an engineering perspective, the project emphasized practical backend fundamentals—relational data modeling (Users, Teams, Tasks, TeamMembers), access-code-based team onboarding (create team → share code → join), input validation via reusable middleware, consistent error handling, and deterministic filtering/sorting across list endpoints. On the frontend, we concentrated on modular UI components, clean REST integrations through a centralized API layer, and responsive, styled-components layouts for Create/Join/Project dashboards. We also prioritized deployment hygiene: environment-specific database configuration, SSL for production Postgres, CORS allowlists for the hosted frontend, health checks, and Docker-compatible builds. By completing Plan Pilot, we delivered a cohesive, maintainable full-stack application that mirrors how modern teams ship secure, scalable, and deployment-ready software—while keeping authentication lightweight through access codes for the MVP scope.
+        </p>
+      </li>
+      <li>
+        <b>Overview of Features:</b>
+        <ul>
+
+          <li><b>Access Code-Driven Project Collaboration:</b>
+            Instead of traditional user accounts or password-based authentication, Plan Pilot implements a lightweight,
+            streamlined onboarding flow centered around <b>unique project access codes</b>. When a new project is created,
+            the backend generates a randomized code that team members can share. Anyone with this code can immediately
+            join the project and begin collaborating, making it easy to spin up project spaces quickly during workshops,
+            demos, or early planning phases.
+          </li>
+
+          <li><b>Project (Team) Management:</b>
+            The backend provides full CRUD support for teams, including project naming, descriptions, member listings,
+            and access code lookups. The frontend exposes these capabilities through polished “Create Project” and 
+            “Join Project” workflows, each with clear validation, success states, and user feedback.
+          </li>
+
+          <li><b>Tasks & Milestones System:</b>
+            Plan Pilot includes a complete task management API that allows users to create, view, update, and delete
+            tasks associated with a project. Tasks support detailed metadata—including status, priority, difficulty,
+            estimated time, and optional descriptions—and the frontend surfaces these in a clean, scrollable list with
+            modal-based task creation.
+          </li>
+
+          <li><b>Role-Aware Team Structure:</b>
+            Projects support a basic role system (owner, admin, member), stored in a relational join table. While the
+            MVP keeps permissions lightweight, the backend includes structured validation and role-aware logic, setting
+            a clear foundation for future expansion into more complex authorization rules.
+          </li>
+
+          <li><b>Interactive Project Dashboard:</b>
+            After joining or creating a project, users are presented with an interactive dashboard that consolidates the
+            core project information—tasks, team members, project description, and access code. The interface is built with
+            styled-components and designed to feel clean, responsive, and intuitive across screen sizes.
+          </li>
+
+          <li><b>AI-Powered Project Plan Generation:</b>
+            The frontend integrates with the Gemini API to generate an AI-assisted project plan. The app compiles the
+            current tasks and team members into a structured prompt and requests a concise, actionable project outline.
+            This includes a summary, suggested timeline, and delegation recommendations, helping teams kickstart planning.
+          </li>
+
+          <li><b>Reusable Validation & Consistent API Responses:</b>
+            The backend uses reusable validation middleware to enforce required fields, validate IDs, and provide
+            predictable JSON error structures. This consistency simplifies frontend integration and ensures that invalid
+            requests fail safely with clear messages.
+          </li>
+
+          <li><b>Relational Data Modeling with Sequelize:</b>
+            Models for Users, Teams, Tasks, and TeamMembers define a clear relational structure. The backend supports
+            eager loading, attribute filtering, and clean associations that make API responses organized and predictable.
+          </li>
+
+          <li><b>Deployment-Ready Infrastructure:</b>
+            Plan Pilot is built with deployment in mind, featuring:
+            <ul>
+              <li>Environment-specific database configurations with SSL support for production</li>
+              <li>CORS configuration for frontend hosting on separate domains</li>
+              <li>Health check endpoints for uptime monitoring</li>
+              <li>Connection pooling and controlled logging for stable cloud behavior</li>
+            </ul>
+            The frontend is containerized using a Dockerfile and served via a lightweight production server.
+          </li>
+
+          <li><b>Centralized API Client on the Frontend:</b>
+            All API communication is routed through a centralized <code>api.js</code> wrapper that handles JSON parsing,
+            error formatting, and dynamic environment URLs. This keeps the frontend code clean, maintainable, and easy to
+            extend as the backend evolves.
+          </li>
+
+        </ul>
+      </li>
+      <li>
+        <b>Your specific contribution in the team:</b>
+        <ul>
+
+          <li><b>Implemented the foundational backend systems:</b>
+            I contributed several major backend features including the full <i>User</i>, <i>Team</i>, and <i>Task</i>
+            systems. This involved defining Sequelize models and associations, creating controllers for CRUD operations,
+            building RESTful routes, and developing reusable validation and authorization middleware to enforce data
+            integrity and access rules.
+            <br />
+          </li>
+
+          <li><b>Built the access code project onboarding flow:</b>
+            I implemented the backend logic for generating unique team access codes, validating codes,
+            and allowing users to join teams via code. This required database constraints, utility functions,
+            and route/controller updates to support the full access-code workflow end-to-end.
+            <br />
+          </li>
+
+          <li><b>Developed backend validation and authorization middleware:</b>
+            I wrote reusable validation layers for tasks, users, and teams (length checks, enum validation,
+            positive integer checks, required fields), as well as role-aware authorization middleware.  
+            These ensured predictable, safe API interactions and clear error responses.
+            <br />
+          </li>
+
+          <li><b>Contributed to key backend architecture and database setup:</b>
+            I helped set up Docker and Docker Compose for the backend + Postgres environment, added environment-specific
+            database configuration (development, test, production), and updated server startup and health check logic.
+            <br />
+          </li>
+
+          <li><b>Implemented the full frontend project dashboard and workflows:</b>
+            I built major frontend pages including the <i>Project Dashboard</i>, <i>Create Project</i>,
+            and <i>Join Project</i> views. This involved styled-components UI, modal flows for adding tasks and members,
+            access-code display and copy interactions, and integrating all components with the backend API layer.
+            <br />
+          </li>
+
+          <li><b>Created the frontend REST API integration layer:</b>
+            I built the <code>api.js</code> wrapper that handles all HTTP requests, including error parsing,
+            JSON safety checks, and environment-based configuration using <code>REACT_APP_API_URL</code>.  
+            This provided a clean, centralized interface for the entire UI.
+            <br />
+          </li>
+
+          <li><b>Setup and fixed deployment configuration:</b>
+            I updated Dockerfiles, CORS settings, and environment variable handling for both frontend and backend so the app
+            could deploy successfully to Render. I also fixed CI/CD passing checks and resolved issues that prevented
+            the production build from running.
+            <br />
+          </li>
+
+          <li><b>Code quality, PR reviews, and merges:</b>
+            I opened multiple PRs reviewed by teammates and GitHub Copilot, addressed feedback, and successfully merged
+            major feature branches into <code>main</code>.
+            <br />
+          </li>
+
+        </ul>
+      </li>
+      <li>
+      <b>Skills (technical and durable) this project demonstrates:</b>
+      <ul>
+
+        <li><b>Full-stack development using Node.js, Express, and React:</b>
+          Built both backend and frontend features, working across routing, controllers, validation middleware,
+          React components, modals, styled-components, and REST API integration. Demonstrated the ability to
+          move fluidly between server-side and client-side development.
+        </li>
+
+        <li><b>Relational data modeling with Sequelize and PostgreSQL:</b>
+          Defined and connected models for Users, Teams, Tasks, and TeamMembers—including associations, indexes,
+          validation rules, and join tables—enabling reliable relational behavior and structured API responses.
+        </li>
+
+        <li><b>REST API architecture & backend engineering:</b>
+          Implemented routes, controllers, validation layers, error handling utilities, and access logic.
+          Ensured predictable and consistent JSON responses for all operations, with clean separation of concerns
+          across controllers, middleware, helpers, and database modules.
+        </li>
+
+        <li><b>Access code-based collaboration workflows:</b>
+          Designed and implemented a unique team creation and joining flow built around randomly generated,
+          database-validated access codes. Integrated generation, lookup, membership checks, and joining logic
+          across backend and frontend systems.
+        </li>
+
+        <li><b>Reusable validation & middleware patterns:</b>
+          Developed scalable validation middleware for teams, tasks, and users, including type checks, string length
+          checks, numeric checks, date validation, and enum validation. Ensured safe writes and predictable
+          error structures throughout the API.
+        </li>
+
+        <li><b>Authorization logic & role handling:</b>
+          Implemented middleware to verify team membership, manage role updates, check permissions for
+          task actions, and protect data operations based on ownership or admin rights.
+        </li>
+
+        <li><b>Frontend UI/UX engineering with React and styled-components:</b>
+          Built polished, responsive pages for creating projects, joining via access code, and managing
+          projects through the dashboard. Added modals, interactive controls, consistent styling,
+          and user-friendly feedback states to support smooth workflows.
+        </li>
+
+        <li><b>API integration and error-resilient client communication:</b>
+          Created a centralized API client that handles fetch requests, error parsing, JSON safety checks,
+          and environment-dependent base URLs—ensuring reliable communication between frontend and backend.
+        </li>
+
+        <li><b>AI integration using the Gemini API:</b>
+          Constructed context-aware prompts incorporating team members and task metadata. Integrated Gemini API
+          calls into the frontend and designed UI for displaying generated project summaries and plans.
+        </li>
+
+        <li><b>Deployment-oriented configuration & environment management:</b>
+          Worked extensively with environment variables, SSL options for production Postgres, CORS restrictions,
+          Dockerfile builds, health checks, and Render-specific fixes to ensure the system was cloud-ready and
+          deployable end-to-end.
+        </li>
+
+        <li><b>Debugging, troubleshooting, and iterative development:</b>
+          Fixed CI/CD issues, resolved backend API errors, corrected mismatched routes, improved environment
+          configuration, and ensured frontend/backend compatibility. Demonstrated persistence and disciplined
+          problem-solving throughout the development process.
+        </li>
+
+        <li><b>Collaboration, communication, and PR workflow:</b>
+          Authored well-structured commits and multi-file pull requests, incorporated teammate and Copilot feedback,
+          resolved merge conflicts, and maintained project consistency while contributing large feature sets.
+        </li>
+
+      </ul>
+    </li>
+      <li>
+        <b>How does this project demonstrate those skills?</b>
+        <ul>
+
+          <li>
+            <b>Situation:</b>
+            Our team was tasked with building a fully functional, deployment-ready full-stack application that supports
+            collaborative project management. The goal was to implement a real backend connected to a live database,
+            expose well-structured REST endpoints, and deliver a polished React frontend capable of creating projects,
+            joining via access code, managing tasks, viewing team members, and generating AI-assisted project plans.
+            The system also needed to run smoothly on Render and operate reliably in cloud environments with production
+            constraints such as CORS, SSL requirements, and environment-specific configuration.
+          </li>
+
+          <li>
+            <b>Task:</b>
+            My role was to implement several of the most important backend and frontend features in the system.
+            This included building core API endpoints for users, teams, and tasks; creating the access-code collaboration
+            flow; developing validation and authorization middleware; setting up database models and associations;
+            integrating the frontend with the backend; implementing the project dashboard; 
+            and fixing deployment issues so the application would successfully run in production.
+          </li>
+
+          <li>
+            <b>Action:</b>
+            <ul>
+              <li>
+                Implemented the <b>Users, Teams, Tasks, and TeamMembers</b> backend systems using Express and Sequelize,
+                including routes, controllers, validation middleware, and relational database structures.
+              </li>
+              <li>
+                Built the <b>access code system</b> for creating teams, generating unique codes, and joining projects,
+                including backend logic, utility functions, and frontend UI flows for entering and validating codes.
+              </li>
+              <li>
+                Developed <b>reusable validation middleware</b> for tasks, teams, and users—enforcing data integrity,
+                structured error messages, valid IDs, length checks, and enum validation.
+              </li>
+              <li>
+                Added <b>role-aware membership logic</b> through a Sequelize join table and corresponding authorization
+                middleware to prepare the system for an expandable permission model.
+              </li>
+              <li>
+                Built major frontend pages, including <i>Create Project</i>, <i>Join Project</i>, and the full
+                <i>Project Dashboard</i> with task lists, team lists, modals, access code display, and responsive UI.
+              </li>
+              <li>
+                Created a <b>centralized API wrapper</b> handling JSON parsing, fetch errors, and environment-based URLs
+                to ensure consistent communication between frontend and backend.
+              </li>
+              <li>
+                Resolved multiple <b>deployment and CI/CD issues</b>, updated Dockerfile and CORS configs, fixed Render
+                environment mismatches, and ensured the backend's health check and production DB settings worked properly.
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <b>Result:</b>
+            Plan Pilot became a fully operational cloud-deployed application where users can create collaborative
+            projects, join via access code, manage tasks and team members, and generate intelligent project plans using AI.
+            Thanks to the backend structure, validation layers, relational models, and front-end integration I implemented,
+            the system runs smoothly across environments and presents a polished, intuitive user experience. My 
+            contributions were central to enabling the project creation flow, team joining functionality, dashboard UI,
+            data validation, backend reliability, and successful deployment—demonstrating my ability to build and ship
+            full-stack applications that are maintainable, scalable, and production-ready.
+          </li>
+
+        </ul>
+      </li>
+      <li>
+      <b>Takeaways:</b>
+      <ul>
+        <li>Strengthened full-stack development skills by building and connecting backend REST endpoints with a responsive React frontend using a clean, reusable API client.</li>
+        <li>Gained practical experience designing relational data models with Sequelize—defining associations, enforcing validations, and returning structured responses that simplify frontend consumption.</li>
+        <li>Improved backend architecture discipline by implementing middleware for validation, access checks, error handling, and environment-aware configuration.</li>
+        <li>Learned deployment-ready backend practices, including SSL configuration for hosted databases, CORS allowlists, health checks, and troubleshooting issues that surfaced only in production.</li>
+        <li>Sharpened problem-solving skills by debugging end-to-end issues across both the UI and API—such as access-code lookups, task updates, route mismatches, and environment variable handling.</li>
+        <li>Gained confidence integrating external services by implementing Gemini for AI-generated project summaries and handling failure paths gracefully.</li>
+        <li>Developed stronger frontend engineering habits by building reusable UI components, modal workflows, and styled-components layouts that are clean, accessible, and easy to maintain.</li>
+        <li>Reinforced collaboration and version-control workflows through focused PRs, multi-file changes, merge conflict resolution, and maintaining clear communication across the team.</li>
+      </ul>
+    </li>
     </ul>
     <h4>Could include:</h4>
     <ul>
