@@ -1,1143 +1,637 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phong Truong's Multiverse Portfolio</title>
+    <title>Phong Truong — Multiverse Software Engineer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script type="importmap">
+      {
+        "imports": {
+          "animejs": "./node_modules/animejs/dist/bundles/anime.esm.js"
+        }
+      }
+    </script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/theme-amber.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
+
   <body>
-    <h1>Final Portfolio</h1>
-    <p>
-      This repository is a collection of some of my key learnings during my Multiverse Software Engineering Bootcamp and my apprenticeship at HP. It includes an overview of my apprenticeship, as well as detailed information about the projects I worked on during the bootcamp and apprenticeship.
-    </p>
-    <h2>Overview of Apprenticeship</h2>
-    <ul>
-      <li><b>HP</b>: - Software Engineering Apprentice</li>
-      <li><b>Jan 2025 - Present</b></li>
-      <li><b>Link to Deployed Portfolio Website</b>: -</li>
-      <li>
-        <b>Must include</b>:
-        <ul>
-          <h2>About Me</h2>
-            <p>
-              Hi, I'm Phong Truong — a former healthcare professional turned Software Engineering Apprentice. For over 10 years, I worked in healthcare, where I witnessed firsthand how technology can improve and save lives: streamlining patient care, enhancing data accuracy, and making critical systems more reliable. I have found that there were some flaws in the system and I always thought to myself about how things could be improved. That exposure sparked a deep curiosity about how software actually works behind the scenes — the logic, the problem-solving, the endless possibilities of how to improve the existing technologies to better serve people.
-            </p>
-
-            <p>
-              After a decade in that world, I decided to follow that curiosity full-time. I wanted to move from being a user of technology to someone who builds and shapes it. Joining my Apprenticeship at HP and the Multiverse Software Engineering Bootcamp felt like the perfect next step — a structured, hands-on way to transition into tech while contributing real value from day one.
-            </p>
-
-            <p>
-              Outside of code, I love to travel and explore new places with my wife and young daughter — those moments of discovery and quality time together keep me grounded and inspired. When I'm not out and about, you'll find me unwinding with a game of chess or diving into strategy-heavy video games like <em>Civilization VI</em> or <em>Tropico 6</em>. I enjoy the challenge of long-term planning, resource management, and outthinking complex systems — skills that surprisingly translate well to debugging, architecture decisions, and building scalable applications.
-            </p>
-
-            <p>
-              I'm passionate about creating clean, efficient, and user-focused software that solves real problems. Over the course of my Multiverse apprenticeship at HP, I've grown significantly as a developer — delivering meaningful contributions to my team, mastering front-end concepts, and gaining hands-on experience with working in a full development cycle, from beginning to end. As I near the end of the program and prepare to transition into a full-time Software Engineer role at HP, I'm eager to continue building on this foundation, tackle more complex challenges, and explore how technology can drive better outcomes.
-            </p>
-
-            <h3>Teams I've Worked On</h3>
-            <p>
-              During my Apprenticeship at HP (January 2025 - Present), I've been one of the key contributors to the <strong>Field Service Mobile App Software Development Team</strong>. This team is responsible for building and maintaining HP's mobile applications that empower field engineers and service technicians to handle on-site support, diagnostics, repairs, and customer interactions efficiently.
-            </p>
-
-<ul>
-  <li><strong>Primary Focus</strong>: Predominantly frontend development — creating intuitive, responsive user interfaces for technicians in the field, ensuring seamless navigation, real-time data display, and mobile-optimized experiences on devices used in real-world service scenarios.</li>
-  <li><strong>Recent Exposure</strong>: I've recently expanded into backend work, collaborating on API integrations, data handling, and server-side logic to support features like work order management, inventory checks, and secure data syncing between mobile clients and HP's backend systems.</li>
-  <li><strong>Team Collaboration</strong>: Worked closely with cross-functional engineers (Figma designer, frontend, backend, QA, product owners) in an agile environment, participating in sprint planning, code reviews, and stand-ups to deliver iterative improvements.</li>
-  <li><strong>Impact</strong>: Contributed to enhancing the reliability and usability of the app, reducing friction for field teams and supporting faster resolution times—directly aligning with HP's goals for efficient global field service operations.</li>
-</ul>
-
-<p>
-  This hands-on experience across the stack has been invaluable in building my full-stack capabilities and understanding how software supports critical business functions like field service management.
-</p>
-
-<h3>Impact I've Had at HP</h3>
-<p>
-  As part of the Field Service Mobile App Software Development Team, my contributions have directly improved the usability and efficiency of HP's field service mobile application, which supports technicians and engineers in delivering on-site support, diagnostics, and service operations worldwide.
-</p>
-
-<ul>
-  <li>
-    <strong>Production Deployments & Immediate Real-World Impact</strong>: At the end of each development lifecycle and sprint cycle, after rigorous testing (unit, integration, QA, and user acceptance), my code contribution gets merged to production. These changes go live directly into the app, meaning my frontend enhancements, bug fixes, and feature iterations have immediate, tangible effects for field technicians—improving their daily workflows, reducing friction, and enabling faster service resolution without delays.
-  </li>
-  <li>
-    <strong>Proudest Contribution: Simplified Agenda View</strong>: One of my most significant impacts was designing and implementing a <strong>compact view for work orders</strong>. This streamlined layout condenses essential information (e.g., status, priority, location, key details) into a more glanceable, mobile-optimized format, making it easier for technicians to scan and act on assignments quickly in the field. After feedback, testing, and iteration, this view was adopted as the <strong>default view</strong> across the FSM (Field Service Management) app. It has become a core part of the technician experience, helping reduce cognitive load and speed up job handling—directly supporting HP's goal of efficient, reliable field operations.
-  </li>
-  <li>
-    <strong>Broader Team & Product Benefits</strong>: Through consistent PRs, demos, code reviews, and collaboration, I've helped enhance overall app stability, responsiveness, and user satisfaction. These improvements contribute to better service delivery, potentially reducing downtime and increasing customer satisfaction for HP's global field service ecosystem.
-  </li>
-</ul>
-
-<p>
-  As my journey continues as a Software Engineer at HP, I'm excited to build on these impacts—continuing to deliver features that make a real difference for end-users while deepening my expertise across the full stack.
-</p>
-
-
-    <h2>Projects</h2>
-    <h3>Inventory Application</h3>
-    <h4>Must include:</h4>
-    <ul>
-      <li>Link to repo:</li>
-      <li><a href="https://github.com/DJP-SWE2526/inventory-app">Inventory App Repo</a></li>
-      <li>
-        <b>Purpose/Goals:</b>
-          <p>The Inventory Application was built to recreate a modern full-stack inventory
-          management tool for an e-commerce engineering team. Beyond delivering core CRUD
-          functionality, the project aimed to strengthen full-stack development fundamentals
-          across React, Express, and SQLite/Sequelize. The team collaborated through GitHub
-          PR workflows and followed a user-story-driven, tier-based development structure,
-          gradually expanding functionality while practicing incremental delivery, code
-          reviews, debugging, and iterative improvement. By progressing through these tiers,
-          we implemented key user workflows such as viewing, adding, editing, and deleting
-          items—mirroring real engineering processes and professional full-stack development
-          practices.</p>
-      <li>
-        <b>Overview of Features:</b>
-        <ul>
-          <li><b>Tier I - View All & Single Item View:</b> Displays all items with
-          name, description, price, category, and image; single item pages show full details.</li>
-
-          <li><b>Tier II - Add Item:</b> React form with validation; submits POST
-          requests to create new items; instant UI updates and feedback.</li>
-
-          <li><b>Tier III - Delete Item:</b> Delete button on item page sends DELETE
-          request to remove an item from the database.</li>
-
-          <li><b>Tier IV - Update Item:</b> Pre-filled form for editing items using
-          PATCH requests; front-end and back-end validation included.</li>
-
-          <li><b>Additional features:</b> Search bar for filtering items, responsive
-          UI with MUI styling, Parcel bundling for modern dev workflow, seeded
-          database with consistent item data.</li>
-        </ul>
-      </li>
-      <li>
-        Your specific contribution in the team:
-        <ul>
-          <li>Implemented Tier 1 front-end view for a single item (initial commit)</li>
-          <li>Built Tier 2 "Add item" form and Express route to create items</li>
-          <li>Added Search, Quantity handling, and Validation features</li>
-          <li>Fixed bugs and iterated via several PRs (see PR list below)</li>
-          <li><a href="https://github.com/DJP-SWE2526/inventory-app/pulls">PRs & commits for this project</a></li>
-          <li>Screenshot of PR history: 
-            <br><img src="images/inventory-prs.png" alt="PR list screenshot" style="width:auto;height: 400px;"></br></li>
-        </ul>
-      </li>
-      <li>
-        <b>Skills (technical and durable) this project demonstrates:</b>
-        <ul>
-          <li><b>Full-Stack Development:</b> Built features across React (frontend) and Express/Sequelize (backend) while completing Tier 1-3 functionality.</li>
-          <li><b>RESTful API Design:</b> Implemented and updated CRUD routes for creating, reading, updating, and deleting items.</li>
-          <li><b>React Component Development:</b> Created and enhanced components for item details, search, quantity updates, and form workflows.</li>
-          <li><b>Form Handling & Validation:</b> Added client-side and server-side validation to ensure correct data input and reliable API behavior.</li>
-          <li><b>State Management:</b> Managed form data, search queries, and UI state with controlled components and React hooks.</li>
-          <li><b>Database Integration:</b> Worked with Sequelize models and queries to persist and update item records.</li>
-          <li><b>Debugging & Bug Fixing:</b> Resolved UI issues, validation errors, and API inconsistencies through iterative PRs.</li>
-          <li><b>Version Control & Collaboration:</b> Used GitHub feature branches and PR reviews to coordinate development.</li>
-          <li><b>Incremental Delivery:</b> Followed a tier-based workflow to deliver features progressively and consistently.</li>
-          <li><b>Problem-Solving & Adaptability:</b> Solved logic issues and implemented new tooling across a modern full-stack environment.</li>
-          <li><b>Technical Communication:</b> Wrote clear PR descriptions documenting enhancements and bug fixes.</li>
-        </ul>
-      </li>
-      <li>
-        <b>How does this project demonstrate those skills?</b>
-        <ul>
-          <li>
-            <b>Situation:</b> Our team was tasked with rebuilding an inventory management
-            system as a full-stack React and Express/Sequelize application. The project
-            required creating a reliable CRUD system, enforcing data integrity, and
-            delivering user-friendly front-end features such as item detail views,
-            search, and form workflows.
-          </li>
-
-          <li>
-            <b>Task:</b> My responsibility was to implement several core features that
-            connected the front end and back end, including the Add Item and Edit Item
-            flows, quantity handling, search functionality, input validation, and PR-driven
-            iterative improvements. I also needed to ensure that the API behaved correctly,
-            validation rules were enforced, and UI components updated consistently.
-          </li>
-
-          <li>
-            <b>Action:</b>
-            <ul>
-              <li>Built and enhanced React components such as the Single Item View, Add Item form, Edit Item form, and search input using controlled components and React hooks.</li>
-              <li>Implemented <code>POST /items</code> and <code>PUT /items/:id</code> routes, including a reusable server-side <code>validateItem</code> function to enforce correct data types and required fields.</li>
-              <li>Expanded the Sequelize model to include <code>quantity</code> with proper validation, default values, and integration into item creation and updates.</li>
-              <li>Enabled numeric handling by parsing user input (<code>parseInt</code>) and preventing invalid values such as negative quantities or zero/invalid prices.</li>
-              <li>Added search filtering on the client side, allowing users to filter items by name or category.</li>
-              <li>Wrote Jest/Supertest cases to verify success and error cases for item creation and fetching.</li>
-              <li>Delivered changes through clear, incremental PRs focused on features such as validation, quantity, search, and Tier 2 item creation.</li>
-            </ul>
-          </li>
-
-          <li>
-            <b>Result:</b> The application now supports a fully functional full-stack
-            workflow with reliable item creation, updating, validation, and searching.
-            My contributions improved stability, data integrity, and usability across
-            the app. The consistent PR process also strengthened collaboration,
-            maintainability, and code clarity while demonstrating strong full-stack
-            engineering practices.
-          </li>
-        </ul>
-      </li>
-        <li>
-          <b>Takeaways:</b>
-          <ul>
-            <li>Strengthened full-stack engineering abilities by delivering React front-end features tightly integrated with Express/Sequelize APIs.</li>
-            <li>Gained hands-on experience enforcing data integrity through both client-side and server-side validation patterns.</li>
-            <li>Improved proficiency in React state management, controlled components, and building user-friendly form workflows.</li>
-            <li>Enhanced debugging skills by resolving UI inconsistencies, validation bugs, and API logic issues across the stack.</li>
-            <li>Learned the value of incremental, tier-based feature delivery to maintain code quality and project momentum.</li>
-            <li>Increased confidence writing automated tests using Jest and Supertest to validate API behavior and prevent regressions.</li>
-            <li>Strengthened collaboration and communication by submitting focused PRs, solving merge conflicts, and documenting technical changes clearly.</li>
-            <li>Developed a better understanding of how UX improvements—such as search filtering and clear form validation—impact overall usability.</li>
-          </ul>
-        </li>
-      </li>
-
-    </ul>
-    <h4>Could include:</h4>
-    <ul>
-      <li>Link to deployed version and/or presentation recording</li>
-      <li><a href="https://www.youtube.com/watch?v=MFk8Emz2Ixg">Inventory Application Presentation</a></li>
-      <li>Architectural diagrams and/or wireframes</li>
-      <li>Screenshots and/or GIFs</li>
-    </ul>
-
-    <h3>Cashflow Guru - Final Bootcamp Project</h3>
-    <h4>Must include:</h4>
-    <ul>
-      <li>Link to repo</li>
-      <li><a href="https://github.com/PhongT06/cashflow-guru">Cashflow Guru Repo</a></li>
-      <li>
-        <b>Purpose/Goals:</b>
-        <p>Cashflow Guru is a modern full-stack personal finance and budgeting application designed to go beyond passive expense tracking by delivering actionable, personalized financial guidance. Traditional budgeting tools often limit themselves to logging income vs. expenses without providing clear strategies for accelerating debt payoff or hitting savings targets faster. This project addresses that gap by enabling users to input monthly income, categorize and track expenses, define debt obligations (with interest rates/balances), set savings goals, and receive tailored advice — including suggested expense reductions, optimized debt repayment sequences, and accelerated savings plans — powered by calculated projections and intelligent recommendations.</p>
-
-        <p>Built as my final Multiverse bootcamp capstone project, Cashflow Guru aimed to deepen full-stack TypeScript proficiency across React (frontend), Node.js/Express (backend), and Prisma ORM with a database backend. As a solo developer, I followed a structured, incremental development approach — starting with core data models and CRUD, progressing to user input flows, financial calculations, and finally integrating the advice-generation logic. This mirrored professional engineering workflows: defining user stories, building iteratively, handling deployment challenges, debugging cross-stack issues, and refining UX for clarity and reliability. The result is a production-ready tool that demonstrates end-to-end ownership of a meaningful real-world application while practicing clean architecture, type safety, and problem-solving under constraints.</p>
-      </li>
-      <li>
-        <b>Overview of Features:</b>
-        <ul>
-          <li><b>Tier I - User Dashboard & Data Overview:</b> Central dashboard displaying monthly income summary, total expenses, current debt balance, savings progress toward goal, and overall cash flow snapshot. Responsive layout with key metrics and visualizations for quick financial health check.</li>
-
-          <li><b>Tier II - Income & Expense Tracking (CRUD):</b> Forms to add, view, edit, and delete monthly income sources and expense entries (categorized by type, e.g., rent, food, entertainment). Real-time updates to dashboard totals; client-side and server-side validation for amounts, dates, and categories.</li>
-
-          <li><b>Tier III - Debt & Savings Goal Input:</b> Dedicated sections/forms to input debt details (balance, interest rate, minimum payment) and savings targets (amount, timeline). Data persisted via Prisma models; supports multiple debts/goals for realistic scenarios.</li>
-
-          <li><b>Tier IV - Personalized Financial Advice Generation:</b> Core differentiator — button-triggered analysis that processes user inputs (income, expenses, debts, goals) and generates tailored recommendations via integrated Google API (e.g., prioritized debt payoff strategies like avalanche/snowball method, suggested expense cuts by category, accelerated savings plans, projected timelines to goals). Advice displayed clearly with actionable steps and rationale.</li>
-
-          <li><b>Additional features:</b> TypeScript end-to-end for type safety, monorepo architecture (npm workspaces separating client/server), Prisma ORM for database schema/migrations/queries, Google API key integration for intelligent advice, basic error handling and user feedback, responsive UI built with custom CSS.</li>
-        </ul>
-      </li>
-      <li>
-        <b>Skills (technical and durable) this project demonstrates:</b>
-        <ul>
-          <li><b>Full-Stack TypeScript Development:</b> Built end-to-end features across React frontend and Node.js/Express backend using TypeScript for type-safe code throughout the application stack.</li>
-
-          <li><b>Prisma ORM & Database Design:</b> Defined relational data models (e.g., for income, expenses, debts, savings goals) with Prisma schema, handled migrations, and performed type-safe queries to persist and retrieve financial data.</li>
-
-          <li><b>RESTful API Design & Integration:</b> Implemented CRUD endpoints for financial entries and integrated external Google API to power personalized advice generation based on user inputs.</li>
-
-          <li><b>React Component Development:</b> Created reusable, typed React components for forms (income/expense/debt/savings input), dashboard views, navigation, and advice display using controlled components and hooks.</li>
-
-          <li><b>Form Handling & Validation:</b> Built client-side and server-side validation for financial inputs (amounts, dates, categories, interest rates) to ensure data integrity and reliable calculations.</li>
-
-          <li><b>State Management & UI Reactivity:</b> Managed application state (user financial data, form inputs, API responses) with React hooks and context for seamless real-time updates to summaries and advice.</li>
-
-          <li><b>External API Integration & Async Handling:</b> Connected and configured Google API key usage to generate intelligent financial recommendations, handling promises, errors, and rate limits.</li>
-
-          <li><b>Debugging & Problem-Solving:</b> Diagnosed and fixed cross-stack issues including API connectivity for advice generation, Prisma query errors, and TypeScript strictness violations.</li>
-
-          <li><b>Technical Communication & Documentation:</b> Organized code clearly and used descriptive commit messages to document changes, integrations, and fixes for future maintainability.</li>
-
-          <li><b>Incremental Delivery & Adaptability:</b> Progressed from backend setup and Prisma models → frontend forms → API integration → deployment fixes, adapting to technical hurdles while delivering a functional capstone.</li>
-        </ul>
-      </li>
-      <li>
-        <b>How does this project demonstrate those skills?</b>
-        <ul>
-          <li>
-            <b>Situation:</b> As my final Multiverse bootcamp project, I set out to build a full-stack personal finance application that addresses limitations in traditional budgeting tools by providing personalized, actionable guidance for debt payoff and savings acceleration. The project required reliable data persistence, user-friendly input flows, complex financial calculations, external API integration for intelligent advice, and production deployment — all while using modern TypeScript tooling in a solo context.
-          </li>
-
-          <li>
-            <b>Task:</b> My responsibility was end-to-end ownership: design the database schema with Prisma, build RESTful APIs for CRUD on financial data, create React frontend components for input and visualization, integrate Google API to generate tailored advice from user inputs, manage state and validation across the stack.
-          </li>
-
-          <li>
-            <b>Action:</b>
-            <ul>
-              <li>Designed Prisma schema and models to store user financial data (income, expenses, debts with interest rates, savings goals), implemented type-safe migrations and queries for persistence and retrieval.</li>
-              <li>Built Express backend routes and controllers for CRUD operations on financial entries, including validation and business logic for calculations (e.g., cash flow summaries, debt payoff projections).</li>
-              <li>Developed React components (e.g., Tracker for expense/income forms, HomePage dashboard, Auth for login flows, Navbar for navigation) using TypeScript, controlled components, and React hooks for reactive UI updates.</li>
-              <li>Integrated Google API key to enable personalized advice generation (processing user financial inputs to produce recommendations like expense cuts, prioritized debt repayment, and accelerated savings timelines), handling async API calls, error cases, and secure key management.</li>
-              <li>Implemented client-side and server-side validation for inputs (e.g., positive amounts, valid dates, reasonable interest rates) to ensure data integrity and prevent invalid calculations/advice.</li>
-              <li>Debugged cross-stack challenges (API connectivity for advice, Prisma query issues, TypeScript errors) through targeted commits and self-reviewed merges.</li>
-            </ul>
-          </li>
-
-          <li>
-            <b>Result:</b> Cashflow Guru is now a functional full-stack application that reliably tracks user finances, generates intelligent personalized advice via Google API integration, and provides a responsive, intuitive interface. My contributions delivered a complete end-to-end solution from schema design to API integration complexities. The iterative process strengthened code quality, maintainability, and my ability to ship a meaningful, user-focused tool solo — demonstrating strong full-stack engineering, problem-solving, and professional practices suitable for real engineering teams.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <b>Takeaways:</b>
-        <ul>
-          <li>Deepened full-stack TypeScript proficiency by building an entire application with strict typing across frontend (React), backend (Node/Express), and database layer (Prisma), reinforcing the value of type safety in preventing runtime errors and improving developer confidence.</li>
-          <li>Gained hands-on mastery of Prisma ORM as a modern, type-safe alternative to traditional ORMs, learning schema design, migrations, relations, and efficient querying in a real financial data context.</li>
-          <li>Strengthened ability to integrate external APIs (Google API for intelligent advice generation), including secure key management, async handling, error resilience, and processing structured outputs to deliver meaningful user value.</li>
-          <li>Enhanced debugging and problem-solving across the full stack by tackling interconnected issues (API connectivity for advice, Prisma query logic, TypeScript strict mode violations) and turning blockers into learning opportunities.</li>
-          <li>Built confidence in end-to-end solo project ownership: from initial setup and schema design to polished frontend UX, and advice logic, proving I can deliver a complete, user-focused product independently.</li>
-          <li>Reinforced the power of incremental delivery even in solo work, self-reviewed PRs, and small, focused commits to maintain momentum, code quality, and clear history.</li>
-          <li>Developed a stronger appreciation for user-centered design: creating intuitive forms, real-time feedback, and clear personalized advice improved usability and highlighted how technical choices directly impact user experience and trust in financial tools.</li>
-          <li>Recognized the unique challenge and reward of building guidance-driven features (beyond basic CRUD) — combining math/logic with API-powered intelligence to solve real personal finance pain points, which deepened my motivation for impactful software.</li>
-        </ul>
-      </li>
-    </ul>
-    <h4>Could include:</h4>
-    <ul>
-      <li>Link to deployed version and/or presentation recording</li>
-      <li><a href="https://www.youtube.com/watch?v=0B7qN8ONbtM">Cashflow Guru Presentation</a></li>
-      <li>Architectural diagrams and/or wireframes</li>
-      <li>Screenshots and/or GIFs</li>
-    </ul>
-    <h3>Back End Module Project</h3>
-    <h4>Must include:</h4>
-    <ul>
-      <li>Link to repo</li>
-      <li><a href="https://github.com/FairyOddTeam/The-Wish-Granting-API">The Wish Granting API Repo</a></li>
-      <li>
-        <b>Purpose/Goals:</b>
-        <p>
-          The Wish Granting API was developed as our Back-End Module project to practice building a well-structured, fully documented RESTful API using Node.js, Express, and a relational database. The goal of the project was to design and implement a backend service that allows users to create, view, update, and delete “wishes” through clearly defined endpoints while applying best practices in routing, validation, error handling, and asynchronous database operations.
-        </p>
-
-        <p>
-          This project focused on strengthening core back-end engineering fundamentals — including data modeling, controller logic, layered architecture, and writing modular, maintainable code. Our team also emphasized collaboration through GitHub workflows, PR reviews, and iterative improvements. By completing this API, we learned how to design scalable endpoints, manage application state on the server, and ensure reliable behavior through consistent HTTP responses and validation patterns.
-        </p>
-      </li>
-
-      <li>
-        <b>Overview of Features:</b>
-        <ul>
-
-          <li><b>User Authentication (Local + Google OAuth 2.0):</b>
-            Supports two authentication flows: traditional username/password login with bcrypt hashing, and Google OAuth 2.0 sign-in using Passport and the Google Auth Library. Both authentication flows issue a signed JWT used to access protected API routes.
-          </li>
-
-          <li><b>JWT-Protected Endpoints:</b>
-            All core resource routes (Users, Wishes, Fairies) are protected by JWT middleware. Authenticated users receive access to their own data, while admins receive elevated privileges.
-          </li>
-
-          <li><b>User Registration & Login:</b>
-            Local signup endpoint creates new users with hashed passwords; login verifies credentials and returns a JWT. A dedicated <code>/auth/google</code> route handles Google provider login and auto-creates users on first OAuth sign-in.
-          </li>
-
-          <li><b>CRUD for Wishes:</b>
-            Users can create, view, edit, and delete their own wishes. Admins can view and manage all wishes. Each wish includes text, category (fun/practical/chaotic), associated user, timestamp fields, and an optional generated outcome.
-          </li>
-
-          <li><b>Fairy Management (Admin-Only):</b>
-            Full CRUD operations for Fairies, protected by <code>requireAdmin</code> middleware. Fairies include name, specialty, status, description, and a linked user_id, and return joined User data in responses.
-          </li>
-
-          <li><b>Role-Based Authorization:</b>
-            Access control enforcing:
-            <ul>
-              <li>Basic users see and modify only their own wishes.</li>
-              <li>Admins can view, edit, or delete any user, wish, or fairy.</li>
-              <li>Error responses clearly distinguish unauthorized (401), forbidden (403), and invalid input (400).</li>
-            </ul>
-          </li>
-
-          <li><b>Associated Data Retrieval:</b>
-            Wish and Fairy endpoints return relational data by joining associated User records, improving API usability for frontend integrations.
-          </li>
-
-          <li><b>Gemini AI Wish Outcome Generation:</b>
-            When granting a wish, the API optionally calls Google Gemini (via <code>fetch</code> + API key) to produce an ironic, humorous magical outcome in the style of The Fairly OddParents, storing the generated text as the wish's <code>outcome</code>.
-          </li>
-
-          <li><b>Comprehensive Validation & Error Handling:</b>
-            Input validation for IDs, wish text length, category values, required fields, and Sequelize model validation errors. Central error handling middleware returns structured, consistent error messages for debugging and client clarity.
-          </li>
-
-          <li><b>Testing with Jest + Supertest:</b>
-            Automated tests cover authentication flows, CRUD operations, error scenarios (404, 401, 403, 400), and database isolation. Gemini calls are mocked to ensure test consistency and speed.
-          </li>
-
-          <li><b>Database via Sequelize + SQLite:</b>
-            Includes relational models (User, Wish, Fairy), model associations, validation rules, lifecycle hooks (password hashing), and deterministic test DB resets.
-          </li>
-
-          <li><b>Tier-Based Feature Delivery:</b>
-            All features were built incrementally following the module's tier progression:
-            <ul>
-              <li>CRUD basics (Tier 1)</li>
-              <li>Password hashing + OAuth (Tiers 2-3)</li>
-              <li>Authorization + JWT protection (Tier 4)</li>
-              <li>Associated users in responses (Tier 5)</li>
-              <li>Admin role + elevated access (Tier 6)</li>
-              <li>Gemini integration + bonus endpoints (Bonus)</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <b>Your specific contribution in the team:</b>
-        <ul>
-
-          <li><b>Implemented full CRUD functionality for Wishes:</b> 
-            Built the Wish model, created the RESTful routes, added input validation, 
-            implemented category support (fun/practical/chaotic), 
-            and handled relational lookups to include the associated User in responses.
-          </li>
-
-          <li><b>Added category-based filtering for wishes:</b>
-            Enhanced the GET /wish endpoint to support category filtering, user-based 
-            filtering, and safe validation for invalid categories.
-          </li>
-
-          <li><b>Implemented Fairy CRUD:</b>
-            Built the full CRUD routes and the Fairy Sequelize model, including 
-            validation rules, associations to Users, and admin-only protections using 
-            <code>requireAdmin</code> middleware.
-          </li>
-
-          <li><b>Developed the frontend API client (WishAPI class):</b>
-            Created a reusable API wrapper that handles authentication headers, 
-            token storage, error handling, parsing JSON responses, and exposes 
-            helper methods (login, getWishes, getWish, createWish, updateWish, 
-            grantWish, etc.).
-          </li>
-
-          <li><b>Integrated frontend with backend authentication:</b>
-            Implemented JWT-based login/logout, user persistence in localStorage, 
-            session expiration handling, and user role detection for showing admin views.
-          </li>
-
-          <li><b>Built the Dashboard, Wishes, and Fairies frontend pages:</b>
-            Wrote logic to load user info, fetch statistics, render wishes/fairies 
-            dynamically, and control UI behavior based on user roles (e.g., only 
-            showing admin forms to admins).
-          </li>
-
-          <li><b>Connected the full stack end-to-end:</b>
-            Implemented all fetch calls, wired up form handlers, added filtering 
-            options, and ensured the client correctly consumed protected endpoints 
-            using JWT authentication.
-          </li>
-
-          <li><b>Performed major refactors & improvements:</b>
-            Updated Wish routes to support category validation, added improved 
-            filtering logic, enhanced error messages, and aligned response structures 
-            with frontend needs.
-          </li>
-
-          <li><b>Provided code review contributions:</b>
-            Opened several feature-specific PRs (Wishes CRUD, Fairies CRUD, 
-            Wish categorization/filtering, Dashboard/wishes/fairies connection), 
-            incorporating review feedback and improving code consistency.
-          </li>
-
-          <li><b>Strengthened user experience:</b>
-            Improved page behavior with loading states, error messages, 
-            real-time updates after create/edit/delete operations, and cleaner UI 
-            integration for magical “wish” and “fairy” themes.
-          </li>
-
-        </ul>
-      </li>
-      <li>
-        <b>Skills (technical and durable) this project demonstrates:</b>
-        <ul>
-          <li><b>Full-Stack Development:</b> Implemented features across the Express/Sequelize backend and a vanilla JS frontend (dashboard, wishes, fairies) with authenticated API calls and role-aware UI behavior.</li>
-
-          <li><b>RESTful API Design:</b> Built and refined CRUD endpoints for <i>Wishes</i> and <i>Fairies</i>, including list/detail routes, PATCH updates, and structured JSON responses with associated <i>User</i> data.</li>
-
-          <li><b>Authentication & Authorization:</b> Implemented local login (bcrypt-hashed passwords), Google OAuth → JWT issuance, and JWT-protected routes; enforced RBAC with admin-only fairy management and user-scoped access for wishes.</li>
-
-          <li><b>Sequelize Modeling & Data Integrity:</b> Defined and validated models (User, Wish, Fairy), set enums (e.g., wish <code>category</code>: fun/practical/chaotic; fairy <code>status</code>: available/busy), and added associations to return joined user info.</li>
-
-          <li><b>Validation & Error Handling:</b> Added robust input checks (IDs, required fields, enums, lengths) and clear 400/401/403/404 responses; standardized error payloads to improve client-side handling.</li>
-
-          <li><b>Frontend Integration & API Client:</b> Built a reusable <code>WishAPI</code> class handling base URL, auth headers, token persistence, response parsing, and helper methods (login, getWishes, create/update/grant, etc.).</li>
-
-          <li><b>AI Integration:</b> Wired a PATCH “grant” flow that optionally calls Gemini to generate humorous outcomes, persists text to <code>outcome</code>, and stamps <code>granted_at</code>.</li>
-
-          <li><b>Collaboration:</b> Delivered focused PRs (Wishes CRUD, Fairies CRUD, wish categorization/filtering, frontend wiring), incorporated feedback, and maintained consistent response shapes.</li>
-
-          <li><b>Incremental Delivery:</b> Executed a tier-based plan—from CRUD (Tier 1) to auth/registration (Tiers 2-3), authorization (Tier 4), associations (Tier 5), admin role (Tier 6), and bonus AI/testing features.</li>
-
-          <li><b>Problem-Solving & Debugging:</b> Resolved issues across the stack (token handling, category validation, role checks, UI state updates) using logs, targeted tests, and iterative fixes.</li>
-
-          <li><b>Technical Communication:</b> Documented intent and impact through descriptive commit messages and PRs; aligned backend contracts with frontend needs for smooth integration.</li>
-        </ul>
-      </li>
-
-      <li>
-        <b>How does this project demonstrate those skills?</b>
-        <ul>
-
-          <li>
-            <b>Situation:</b>  
-            Our team was tasked with building a secure, feature-rich backend API that supports 
-            user authentication, role-based authorization, CRUD operations for multiple 
-            resources (Wishes, Fairies, Users), and optional AI-generated wish outcomes. 
-            The system needed to serve both internal testers and an in-progress frontend client, 
-            requiring predictable endpoints, strong validation, and consistent behavior across 
-            protected routes.
-          </li>
-
-          <li>
-            <b>Task:</b>  
-            My responsibility was to implement major backend features—including full CRUD for 
-            Wishes and Fairies, category filtering, relational lookups, and validation—and to 
-            build the frontend integration layer that authenticated users, requested data, and 
-            rendered it in the dashboard, wish pages, and fairy management screens.
-          </li>
-
-          <li>
-            <b>Action:</b>
-            <ul>
-              <li>Implemented the complete Wishes CRUD flow, including input validation, category enums, 
-              error responses, user-specific filtering, and relational joins to return associated 
-              User data.</li>
-
-              <li>Built the Fairies CRUD feature (model + routes), including admin-only route protection, 
-              validation rules, user lookups, and structured responses.</li>
-
-              <li>Enhanced Wish endpoints with category filtering (<code>?category=fun/practical/chaotic</code>) 
-              and implemented request validation for invalid values.</li>
-
-              <li>Developed the <code>WishAPI</code> frontend utility class to manage base URLs, 
-              authentication headers, fetch requests, JSON parsing, and error handling, enabling 
-              consistent API integration across pages.</li>
-
-              <li>Implemented frontend logic for the dashboard, wishes page, and fairies page, including 
-              dynamic rendering, user role detection, admin-only UI controls, and real-time updates 
-              after CRUD operations.</li>
-
-              <li>Created end-to-end flows for login/logout, JWT persistence, and automatic logout on 
-              token expiration using the API client's response handlers.</li>
-
-              <li>Delivered feature-focused PRs (Wishes CRUD, Fairies CRUD, Wish categorization/filtering, 
-              frontend wiring) to maintain consistency and quality across the codebase.</li>
-            </ul>
-          </li>
-
-          <li>
-            <b>Result:</b>  
-            The Wish Granting API now provides a secure, stable, and role-aware backend with fully 
-            functional CRUD operations for Wishes and Fairies, validation throughout the stack, 
-            and seamless integration with the frontend client. My contributions enabled the 
-            end-to-end workflows: users can sign in, manage wishes, view filtered lists, interact 
-            with fairies, and access a functioning dashboard. The project demonstrates strong 
-            engineering practices in API design, security, full-stack integration, and 
-            collaborative delivery, while also laying the groundwork for bonus features like 
-            Gemini-driven wish outcomes.
-          </li>
-
-        </ul>
-      </li>
-      <li>
-        <b>Takeaways:</b>
-        <ul>
-          <li>Strengthened end-to-end API development by delivering secure CRUD for Wishes/Fairies with clear HTTP contracts and relational responses.</li>
-          <li>Gained practical experience implementing authentication/authorization patterns.</li>
-          <li>Improved Sequelize modeling and validation discipline with enums, associations, and helpful 4xx error semantics.</li>
-          <li>Enhanced full-stack integration skills by building a reusable frontend API client (auth headers, token storage, error handling) and wiring dashboards/pages to protected endpoints.</li>
-          <li>Sharpened debugging techniques across the stack—token lifecycle issues, category validation, role checks, and UI state updates.</li>
-          <li>Built confidence with automated testing (Jest + Supertest), database isolation, and mocking external services for deterministic runs.</li>
-          <li>Reinforced incremental delivery via tier-based milestones, keeping scope focused and the codebase stable as features expanded.</li>
-          <li>Developed comfort integrating AI services (Gemini) behind safe server flows, persisting generated outcomes and handling failures gracefully.</li>
-          <li>Strengthened collaboration through focused PRs, descriptive commit messages, and aligning backend contracts with frontend needs.</li>
-        </ul>
-      </li>
-    </ul>
-    <h4>Could include:</h4>
-    <ul>
-      <li>Link to deployed version and/or presentation recording</li>
-      <li><a href="https://www.youtube.com/watch?v=psR3YDZe-sY">Fairly Odd Team Presentation</a></li>
-      <li>Architectural diagrams and/or wireframes</li>
-      <li>Screenshots and/or GIFs</li>
-    </ul>
-    <h3>Front End Module Project</h3>
-    <h4>Must include:</h4>
-    <ul>
-      <li>Link to repo</li>
-      <li><a href="https://github.com/DustinAndPhongFrontend/frontend-project">Medieval Times Repo</a></li>
-      <li>
-        <b>Purpose/Goals:</b>
-        <p>
-          Medieval Times was developed as our Front-End Module project to practice building a rich, interactive, and fully modern user interface using Next.js, TypeScript, and a variety of advanced front-end tools. 
-          The goal of the project was to create an immersive RPG-style experience — complete with drag-and-drop inventory management, equippable items, animated quest flows, character stats, and persistent game state — 
-          while applying professional engineering best practices in component design, state architecture, responsiveness, and automated testing.
-        </p>
-
-        <p>
-          This project focused heavily on strengthening core front-end engineering fundamentals — including building reusable UI components, managing global state through Context + Reducer patterns, 
-          implementing drag-and-drop behaviors with <code>@dnd-kit</code>, designing responsive layouts with TailwindCSS, and adding animations through React Spring. We also incorporated a structured JSON data model 
-          for items and quests, enabling realistic content-driven interactions. To ensure long-term maintainability and reliability, we added thorough unit tests using Vitest and end-to-end tests using Playwright, 
-          validating critical user flows such as equipping items, accepting quests, and completing missions. By completing this project, we developed the ability to build a polished, highly interactive application that 
-          mirrors real-world front-end product development practices.
-        </p>
-      </li>
-      <li>
-        <b>Overview of Features:</b>
-        <ul>
-          <li><b>Drag-and-Drop Inventory & Equipment System:</b>
-            Interactive inventory grid and equipment slots built with <code>@dnd-kit</code>, supporting mouse, touch, and keyboard sensors for accessibility. Items can be dragged from inventory to matching equipment slots with acceptance rules and immediate state updates.
-          </li>
-
-          <li><b>Equipment Slot Validation & Feedback:</b>
-            Each slot declares accepted item types (e.g., <i>weapon</i>, <i>helmet</i>, <i>armor</i>, <i>boots</i>). Invalid drops are rejected with clear visual cues and sound effects; valid drops trigger equip actions and success audio for delightful UX.
-          </li>
-
-          <li><b>Persistent Global Game State:</b>
-            App-wide state managed via Context + Reducer (username, class, inventory, equipped items, stats, gold, quests). State is saved to <code>localStorage</code> so progression, inventory, and quest logs persist across reloads.
-          </li>
-
-          <li><b>Quest Message Board (Dynamic Rotation):</b>
-            A “Message Board” page displays a rotating selection of quests sourced from JSON. Accepted quests are filtered out and instantly replaced with new ones; users can flip cards for details, accept, or decline with dedicated actions.
-          </li>
-
-          <li><b>Quest Log with Active/Completed Tabs:</b>
-            A “Quest Log” page organizes quests into “Active” and “Completed” tabs with responsive cards, mobile-friendly layouts, and a detail modal. Active quests include a one-click “Complete Quest” flow to advance progression.
-          </li>
-
-          <li><b>Quest Completion Engine (Rewards, XP, Leveling):</b>
-            Completing a quest processes rewards by parsing strings like “100 gold, Dragon Scale Armor.” Gold is added, items are inserted into the first available inventory slots, and XP triggers level-ups with stat increases and updated health/mana.
-          </li>
-
-          <li><b>Typed Items & Quests via JSON Data:</b>
-            Items (weapons, armor, helmets, boots, shields, accessories, materials, consumables) and quests are defined in structured JSON. Helpers map reward text → item IDs and pull full item definitions for consistent, type-safe usage in the UI.
-          </li>
-
-          <li><b>Character Stats & Equipment Bonuses:</b>
-            Real-time stat panel displays base stats and derived totals from equipped items (e.g., Intelligence, Strength, Dexterity, Luck, Max Health/Mana). Level-ups apply incremental increases and optionally restore health/mana.
-          </li>
-
-          <li><b>Responsive Header & Navigation with Badges:</b>
-            Animated site header (React Spring) with desktop and mobile navigation, a live quest badge showing active quest count, and a gold counter. Includes a mobile hamburger menu with auto-close on route changes and resize events.
-          </li>
-
-          <li><b>Animations & Theming:</b>
-            React Spring powers subtle entrance and transition animations. The UI uses CSS Modules and Tailwind-like utility classes for a cohesive medieval theme, including parchment textures and stylized modals.
-          </li>
-
-          <li><b>Accessibility & Multi-Input Support:</b>
-            Drag-and-drop supports mouse, touch, and keyboard sensors; droppable zones provide hover states; modal interactions support keyboard navigation and click-outside to close; ARIA labels for navigational controls where applicable.
-          </li>
-
-          <li><b>Testing Strategy (Vitest + Playwright):</b>
-            Unit/integration tests validate reducers, parsing utilities (e.g., reward parsing), and component behavior. End-to-end tests cover core user flows: equipping items, reordering inventory, accepting/declining quests, and completing quests.
-          </li>
-
-          <li><b>Developer Experience & Tooling:</b>
-            Next.js App Router with client components, TypeScript for type safety, ESLint for consistency, and quick-start scripts:
-            <code>npm run dev</code>, <code>npm run test</code>, <code>npm run test-e2e</code>, and <code>playwright codegen</code> for rapid E2E authoring.
-          </li>
-
-          <li><b>Audio Feedback & Polish:</b>
-            Subtle sound cues on equip/error actions (e.g., success chime, error tone) using hosted audio assets to reinforce feedback loops and enhance overall game feel.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <b>Your specific contribution in the team:</b>
-        <ul>
-          <li><b>Quest System Foundation:</b> 
-            Bootstrapped the <i>Message Board</i> and <i>Quest Log</i> features:
-            added <code>quests.json</code> content set, built rotating quest display with card flip details,
-            wired accept/decline actions, and filtered/replace logic to prevent duplicates in the board.
-            <br />
-          </li>
-
-          <li><b>Quest Log UI & Navigation Enhancements:</b>
-            Implemented the <i>Quest Log</i> page with Active/Completed tabs, responsive card grid, and modal view; 
-            updated the header/navbar (desktop + mobile menu, active route styles, gold counter, quest badge).
-            <br />
-          </li>
-
-          <li><b>Quest Reward Engine & Data Model:</b>
-            Introduced an items database (typed JSON for weapons/armor/boots/accessories/materials/consumables) and 
-            standardized the quest reward string format (e.g., “100 gold, Dragon Scale Armor”). 
-            Built reward parsing + item lookup utilities and integrated them into the quest completion flow 
-            to add gold, inject items into the first available inventory slot, and trigger XP/level logic.
-            <br />
-          </li>
-
-          <li><b>Completion Flow & UX Polish:</b>
-            Implemented the animated <i>Quest Completion</i> modal with staggered reveals (gold, items, level-up, stats),
-            hooked into reducer actions (<code>FINISH_QUEST</code>, <code>SHOW/HIDE_COMPLETION_RESULT</code>), and 
-            ensured persistence via <code>localStorage</code>. Fixed content issues (e.g., item naming mismatch) to keep
-            rewards reliable end-to-end.
-            <br />
-          </li>
-
-          <li><b>Integration & Code Health:</b>
-            Merged feature branches into <code>main</code>, resolved conflicts, and maintained consistency across 
-            the app's context/reducer, header/nav, and quest components. Ensured changes passed checks prior to merge.
-            <br />
-          </li>
-
-          <li><b>Testing & Developer Experience:</b>
-            Set up and contributed to the testing workflow: <b>Vitest</b> for reducers/utilities (e.g., reward parsing, 
-            inventory mutations) and <b>Playwright</b> for E2E coverage (equip item, invalid drop handling, accept quest, 
-            complete quest → rewards applied). Added helpful scripts for local runs and interactive E2E authoring.
-            <br />
-            <i>Scripts:</i> <code>npm run test</code>, <code>npm run test-e2e</code>, <code>npm run test-e2e-interactive</code>, <code>npm run dev</code>.
-          </li>
-        </ul>
-      </li>
-      <li>
-        <b>Skills (technical and durable) this project demonstrates:</b>
-        <ul>
-
-          <li><b>Front-End Architecture & Component Design:</b>
-            Built reusable, type-safe React components for inventory, equipment, quests, stats, navigation, and modals using the Next.js App Router. Demonstrated ability to break down complex UI systems into maintainable, testable modules.
-          </li>
-
-          <li><b>Global State Management (Context + Reducer):</b>
-            Implemented a centralized game state including inventory, equipped items, stats, gold, accepted quests, completed quests, and progression. Applied reducer patterns for predictable updates, immutability, and scalable action handling.
-          </li>
-
-          <li><b>Drag-and-Drop Engineering:</b>
-            Utilized <code>@dnd-kit/core</code> to implement accessible drag-and-drop interactions with mouse, touch, and keyboard sensors. Added slot acceptance rules, hover states, and visual/audio feedback to reinforce intuitive user actions.
-          </li>
-
-          <li><b>Persistent Application State:</b>
-            Used <code>localStorage</code> to persist the entire game state across refreshes, creating a “save file” experience. Wrapped the reducer with a persistence layer to serialize and rehydrate state on load.
-          </li>
-
-          <li><b>Data Modeling & Parsing:</b>
-            Designed structured JSON models for all items and quests (over 100+ entries). Built utilities to parse textual quest rewards (e.g., “100 gold, Dragon Scale Armor”), resolve item IDs, and validate reward data programmatically.
-          </li>
-
-          <li><b>Game Logic & Systems Thinking:</b>
-            Implemented an XP and level-up system, stat progression, inventory reward distribution, quest acceptance filters, and item-based stat modifiers. Ensured all systems worked together cohesively across state boundaries.
-          </li>
-
-          <li><b>Responsive & Accessible UI:</b>
-            Used TailwindCSS, CSS Modules, and responsive design helpers to support desktop, tablet, and mobile layouts. Added keyboard navigation support, ARIA labels, accessible modals, and mobile-optimized navigation flows.
-          </li>
-
-          <li><b>Animation & Interaction Design:</b>
-            Used React Spring for entrance animations, menu transitions, and staged reward reveal effects in the Quest Completion modal, creating a polished and engaging user experience.
-          </li>
-
-          <li><b>Testing (Unit, Integration, E2E):</b>
-            Wrote unit and integration tests with Vitest for reducers, parsing utilities, and components. Developed Playwright end-to-end tests to validate core flows (item equip, quest accept/decline, quest completion, stat progression).
-          </li>
-
-          <li><b>Version Control & Collaboration:</b>
-            Contributed feature-specific commits and PRs for the message board, quest log, reward system, items database, completion modal, and navbar updates. Merged branches, resolved conflicts, and aligned code styles across the project.
-          </li>
-
-          <li><b>Problem-Solving & Debugging:</b>
-            Troubleshot and fixed issues related to drag data, reward parsing mismatches, item lookup errors, state rehydration, and hydration warnings in Next.js. Improved reliability and consistency through iterative refinements.
-          </li>
-
-          <li><b>Technical Communication:</b>
-            Authored clear commit messages, PR descriptions, and code comments explaining logic, file structures, and architectural decisions. Ensured teammates could quickly understand changes and integrate them into the project.
-          </li>
-
-        </ul>
-      </li>
-      <li>
-        <b>How does this project demonstrate those skills?</b>
-        <ul>
-
-          <li>
-            <b>Situation:</b>
-            Our team was tasked with building a fully interactive, RPG-style front-end application that combined inventory management, quest progression, character statistics, animations, and persistent state — all within the constraints of a modern Next.js and TypeScript environment. The experience needed to feel cohesive and game-like, while still using professional engineering practices such as modular components, predictable state updates, and automated testing.
-          </li>
-
-          <li>
-            <b>Task:</b>
-            My responsibility was to architect and implement several of the most complex systems in the application, including the quest board, quest log, quest reward engine, items database, and the complete quest completion flow. I also updated global navigation, integrated state persistence, and ensured seamless interaction between game systems (inventory, rewards, stats, and level progression). Additionally, I owned multiple feature branches, contributed PRs, resolved merge conflicts, and enhanced UX with animations, and responsive layouts.
-          </li>
-
-          <li>
-            <b>Action:</b>
-            <ul>
-              <li>
-                Built the <b>Message Board</b> system with quest rotation, card-flip UI, accept/decline workflows, filtering of accepted quests, and auto-replacement of taken quests using structured JSON data.
-              </li>
-              <li>
-                Designed and implemented the <b>Quest Log</b> with Active/Completed tabs, quest detail modal, completion actions, responsive grids, and mobile-friendly adaptations.
-              </li>
-              <li>
-                Created a comprehensive <b>items database</b> (weapons, armor, accessories, materials, consumables) and built utilities to parse quest reward strings (e.g., "100 gold, Dragon Scale Armor") into gold values and item IDs.
-              </li>
-              <li>
-                Developed the <b>Quest Completion Engine</b> to apply gold rewards, add rewarded items to inventory, calculate XP gains, process multiple level-ups, and return updated stats, inventory, and quest metadata.
-              </li>
-              <li>
-                Implemented the <b>animated quest completion modal</b> using React Spring, with staged reveal effects for rewards, items, and level-up changes, tied directly into reducer logic.
-              </li>
-              <li>
-                Updated the <b>header/navbar</b> with responsive design, an animated title, route-based active link states, a live quest badge counter, mobile menu handling, and a gold display synced to game state.
-              </li>
-              <li>
-                Contributed strongly to <b>global state architecture</b> by enhancing the reducer, adding new actions, ensuring idempotent updates, and wrapping it with persistent localStorage serialization.
-              </li>
-              <li>
-                Added <b>Vitest</b> tests for reducers and reward parsing utilities, and created <b>Playwright E2E tests</b> covering inventory equip flows, quest acceptance, quest completion rewards, level-up logic, and UI state transitions.
-              </li>
-              <li>
-                Authored multiple feature branches and PRs such as:
-                <i>"Added message board," "Added quests.json," "Updated message board with CSS styling," 
-                “Added quest log,” “Updated header/navbar,” “Added items database,” 
-                “Updated quest reward structure,” “Added quest completion pop up.”</i>
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <b>Result:</b>
-            The final application delivered a polished, immersive experience blending RPG game mechanics with modern front-end engineering. Users can equip items via drag-and-drop, accept and complete quests, gain rewards and levels, view animated progression, and maintain persistent state across sessions. My contributions were central to enabling these core systems — from quest data modeling and reward processing to UI/UX polish and navigation — resulting in a cohesive, feature-rich application. This project demonstrated my ability to architect complex front-end systems, build production-quality user experiences, and contribute collaboratively in a multi-feature codebase using professional engineering workflows.
-          </li>
-
-        </ul>
-      </li>
-      <li>
-        <b>Takeaways:</b>
-        <ul>
-          <li>Strengthened front-end architecture skills through building a multi-component system using reducers, context, typed models, and coordinated drag-and-drop interactions.</li>
-          <li>Gained practical experience designing interconnected UI logic by implementing quest flows, reward handling, inventory updates, and stat progression in a predictable and scalable way.</li>
-          <li>Improved UX design discipline by adding responsive layouts, hover states, sound cues, animations, and clear feedback loops to guide user interaction.</li>
-          <li>Learned to build for accessibility and responsiveness by supporting keyboard-based drag-and-drop, mobile navigation patterns, and inclusive modal interactions.</li>
-          <li>Strengthened testing habits with both unit tests (Vitest) and full user-flow tests (Playwright), improving confidence in state-heavy interactive features.</li>
-          <li>Developed best practices for data-driven UI development by structuring item and quest data in JSON, parsing reward strings, and separating domain logic from presentation.</li>
-          <li>Enhanced collaboration and Git workflow skills by working across multiple feature branches, resolving merge conflicts, iterating on PRs, and maintaining consistent code quality.</li>
-          <li>Built confidence creating polished, interactive interfaces by blending engineering patterns with thoughtful design choices that made the application feel cohesive and engaging.</li>
-        </ul>
-      </li>
-    </ul>
-    <h4>Could include:</h4>
-    <ul>
-      <li>Link to deployed version and/or presentation recording</li>
-      <li><a href="https://www.youtube.com/watch?v=6ken1cwg0pk">Medieval Times Presentation</a></li>
-      <li>Architectural diagrams and/or wireframes</li>
-      <li>Screenshots and/or GIFs</li>
-    </ul>
-    <h3>Deployment Module Project</h3>
-    <h4>Must include:</h4>
-    <ul>
-      <li>Link to repo</li>
-      <li><a href="https://github.com/Team-PlanPilot/PlanPilot">Plan Pilot Repo</a></li>
-      <li>
-        <b>Purpose/Goals:</b>
-        <p>
-          Plan Pilot was developed as our Deployment Module project to build, deploy, and integrate a production-ready full-stack application supporting real-world team collaboration workflows. The goal was to design a scalable backend using Node.js, Express, PostgreSQL, and Sequelize—paired with a responsive React frontend—to enable teams to create projects (teams), invite collaborators via unique access codes, manage tasks, and generate AI-assisted project plans. The focus was on cloud deployment readiness, environment configuration, and delivering a robust API that a real client can consume reliably.
-        </p>
-
-        <p>
-          From an engineering perspective, the project emphasized practical backend fundamentals—relational data modeling (Users, Teams, Tasks, TeamMembers), access-code-based team onboarding (create team → share code → join), input validation via reusable middleware, consistent error handling, and deterministic filtering/sorting across list endpoints. On the frontend, we concentrated on modular UI components, clean REST integrations through a centralized API layer, and responsive, styled-components layouts for Create/Join/Project dashboards. We also prioritized deployment hygiene: environment-specific database configuration, SSL for production Postgres, CORS allowlists for the hosted frontend, health checks, and Docker-compatible builds. By completing Plan Pilot, we delivered a cohesive, maintainable full-stack application that mirrors how modern teams ship secure, scalable, and deployment-ready software—while keeping authentication lightweight through access codes for the MVP scope.
-        </p>
-      </li>
-      <li>
-        <b>Overview of Features:</b>
-        <ul>
-
-          <li><b>Access Code-Driven Project Collaboration:</b>
-            Instead of traditional user accounts or password-based authentication, Plan Pilot implements a lightweight,
-            streamlined onboarding flow centered around <b>unique project access codes</b>. When a new project is created,
-            the backend generates a randomized code that team members can share. Anyone with this code can immediately
-            join the project and begin collaborating, making it easy to spin up project spaces quickly during workshops,
-            demos, or early planning phases.
-          </li>
-
-          <li><b>Project (Team) Management:</b>
-            The backend provides full CRUD support for teams, including project naming, descriptions, member listings,
-            and access code lookups. The frontend exposes these capabilities through polished “Create Project” and 
-            “Join Project” workflows, each with clear validation, success states, and user feedback.
-          </li>
-
-          <li><b>Tasks & Milestones System:</b>
-            Plan Pilot includes a complete task management API that allows users to create, view, update, and delete
-            tasks associated with a project. Tasks support detailed metadata—including status, priority, difficulty,
-            estimated time, and optional descriptions—and the frontend surfaces these in a clean, scrollable list with
-            modal-based task creation.
-          </li>
-
-          <li><b>Role-Aware Team Structure:</b>
-            Projects support a basic role system (owner, admin, member), stored in a relational join table. While the
-            MVP keeps permissions lightweight, the backend includes structured validation and role-aware logic, setting
-            a clear foundation for future expansion into more complex authorization rules.
-          </li>
-
-          <li><b>Interactive Project Dashboard:</b>
-            After joining or creating a project, users are presented with an interactive dashboard that consolidates the
-            core project information—tasks, team members, project description, and access code. The interface is built with
-            styled-components and designed to feel clean, responsive, and intuitive across screen sizes.
-          </li>
-
-          <li><b>AI-Powered Project Plan Generation:</b>
-            The frontend integrates with the Gemini API to generate an AI-assisted project plan. The app compiles the
-            current tasks and team members into a structured prompt and requests a concise, actionable project outline.
-            This includes a summary, suggested timeline, and delegation recommendations, helping teams kickstart planning.
-          </li>
-
-          <li><b>Reusable Validation & Consistent API Responses:</b>
-            The backend uses reusable validation middleware to enforce required fields, validate IDs, and provide
-            predictable JSON error structures. This consistency simplifies frontend integration and ensures that invalid
-            requests fail safely with clear messages.
-          </li>
-
-          <li><b>Relational Data Modeling with Sequelize:</b>
-            Models for Users, Teams, Tasks, and TeamMembers define a clear relational structure. The backend supports
-            eager loading, attribute filtering, and clean associations that make API responses organized and predictable.
-          </li>
-
-          <li><b>Deployment-Ready Infrastructure:</b>
-            Plan Pilot is built with deployment in mind, featuring:
-            <ul>
-              <li>Environment-specific database configurations with SSL support for production</li>
-              <li>CORS configuration for frontend hosting on separate domains</li>
-              <li>Health check endpoints for uptime monitoring</li>
-              <li>Connection pooling and controlled logging for stable cloud behavior</li>
-            </ul>
-            The frontend is containerized using a Dockerfile and served via a lightweight production server.
-          </li>
-
-          <li><b>Centralized API Client on the Frontend:</b>
-            All API communication is routed through a centralized <code>api.js</code> wrapper that handles JSON parsing,
-            error formatting, and dynamic environment URLs. This keeps the frontend code clean, maintainable, and easy to
-            extend as the backend evolves.
-          </li>
-
-        </ul>
-      </li>
-      <li>
-        <b>Your specific contribution in the team:</b>
-        <ul>
-
-          <li><b>Implemented the foundational backend systems:</b>
-            I contributed several major backend features including the full <i>User</i>, <i>Team</i>, and <i>Task</i>
-            systems. This involved defining Sequelize models and associations, creating controllers for CRUD operations,
-            building RESTful routes, and developing reusable validation and authorization middleware to enforce data
-            integrity and access rules.
-            <br />
-          </li>
-
-          <li><b>Built the access code project onboarding flow:</b>
-            I implemented the backend logic for generating unique team access codes, validating codes,
-            and allowing users to join teams via code. This required database constraints, utility functions,
-            and route/controller updates to support the full access-code workflow end-to-end.
-            <br />
-          </li>
-
-          <li><b>Developed backend validation and authorization middleware:</b>
-            I wrote reusable validation layers for tasks, users, and teams (length checks, enum validation,
-            positive integer checks, required fields), as well as role-aware authorization middleware.  
-            These ensured predictable, safe API interactions and clear error responses.
-            <br />
-          </li>
-
-          <li><b>Contributed to key backend architecture and database setup:</b>
-            I helped set up Docker and Docker Compose for the backend + Postgres environment, added environment-specific
-            database configuration (development, test, production), and updated server startup and health check logic.
-            <br />
-          </li>
-
-          <li><b>Implemented the full frontend project dashboard and workflows:</b>
-            I built major frontend pages including the <i>Project Dashboard</i>, <i>Create Project</i>,
-            and <i>Join Project</i> views. This involved styled-components UI, modal flows for adding tasks and members,
-            access-code display and copy interactions, and integrating all components with the backend API layer.
-            <br />
-          </li>
-
-          <li><b>Created the frontend REST API integration layer:</b>
-            I built the <code>api.js</code> wrapper that handles all HTTP requests, including error parsing,
-            JSON safety checks, and environment-based configuration using <code>REACT_APP_API_URL</code>.  
-            This provided a clean, centralized interface for the entire UI.
-            <br />
-          </li>
-
-          <li><b>Setup and fixed deployment configuration:</b>
-            I updated Dockerfiles, CORS settings, and environment variable handling for both frontend and backend so the app
-            could deploy successfully to Render. I also fixed CI/CD passing checks and resolved issues that prevented
-            the production build from running.
-            <br />
-          </li>
-
-          <li><b>Code quality, PR reviews, and merges:</b>
-            I opened multiple PRs reviewed by teammates and GitHub Copilot, addressed feedback, and successfully merged
-            major feature branches into <code>main</code>.
-            <br />
-          </li>
-
-        </ul>
-      </li>
-      <li>
-      <b>Skills (technical and durable) this project demonstrates:</b>
-      <ul>
-
-        <li><b>Full-stack development using Node.js, Express, and React:</b>
-          Built both backend and frontend features, working across routing, controllers, validation middleware,
-          React components, modals, styled-components, and REST API integration. Demonstrated the ability to
-          move fluidly between server-side and client-side development.
-        </li>
-
-        <li><b>Relational data modeling with Sequelize and PostgreSQL:</b>
-          Defined and connected models for Users, Teams, Tasks, and TeamMembers—including associations, indexes,
-          validation rules, and join tables—enabling reliable relational behavior and structured API responses.
-        </li>
-
-        <li><b>REST API architecture & backend engineering:</b>
-          Implemented routes, controllers, validation layers, error handling utilities, and access logic.
-          Ensured predictable and consistent JSON responses for all operations, with clean separation of concerns
-          across controllers, middleware, helpers, and database modules.
-        </li>
-
-        <li><b>Access code-based collaboration workflows:</b>
-          Designed and implemented a unique team creation and joining flow built around randomly generated,
-          database-validated access codes. Integrated generation, lookup, membership checks, and joining logic
-          across backend and frontend systems.
-        </li>
-
-        <li><b>Reusable validation & middleware patterns:</b>
-          Developed scalable validation middleware for teams, tasks, and users, including type checks, string length
-          checks, numeric checks, date validation, and enum validation. Ensured safe writes and predictable
-          error structures throughout the API.
-        </li>
-
-        <li><b>Authorization logic & role handling:</b>
-          Implemented middleware to verify team membership, manage role updates, check permissions for
-          task actions, and protect data operations based on ownership or admin rights.
-        </li>
-
-        <li><b>Frontend UI/UX engineering with React and styled-components:</b>
-          Built polished, responsive pages for creating projects, joining via access code, and managing
-          projects through the dashboard. Added modals, interactive controls, consistent styling,
-          and user-friendly feedback states to support smooth workflows.
-        </li>
-
-        <li><b>API integration and error-resilient client communication:</b>
-          Created a centralized API client that handles fetch requests, error parsing, JSON safety checks,
-          and environment-dependent base URLs—ensuring reliable communication between frontend and backend.
-        </li>
-
-        <li><b>AI integration using the Gemini API:</b>
-          Constructed context-aware prompts incorporating team members and task metadata. Integrated Gemini API
-          calls into the frontend and designed UI for displaying generated project summaries and plans.
-        </li>
-
-        <li><b>Deployment-oriented configuration & environment management:</b>
-          Worked extensively with environment variables, SSL options for production Postgres, CORS restrictions,
-          Dockerfile builds, health checks, and Render-specific fixes to ensure the system was cloud-ready and
-          deployable end-to-end.
-        </li>
-
-        <li><b>Debugging, troubleshooting, and iterative development:</b>
-          Fixed CI/CD issues, resolved backend API errors, corrected mismatched routes, improved environment
-          configuration, and ensured frontend/backend compatibility. Demonstrated persistence and disciplined
-          problem-solving throughout the development process.
-        </li>
-
-        <li><b>Collaboration, communication, and PR workflow:</b>
-          Authored well-structured commits and multi-file pull requests, incorporated teammate and Copilot feedback,
-          resolved merge conflicts, and maintained project consistency while contributing large feature sets.
-        </li>
-
+    <!-- --- NAV --------------------------------------------------------------- -->
+    <nav id="nav">
+      <a href="#hero" class="nav-logo">PT</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects" class="nav-cta">View Work</a></li>
       </ul>
-    </li>
-      <li>
-        <b>How does this project demonstrate those skills?</b>
-        <ul>
+    </nav>
 
-          <li>
-            <b>Situation:</b>
-            Our team was tasked with building a fully functional, deployment-ready full-stack application that supports
-            collaborative project management. The goal was to implement a real backend connected to a live database,
-            expose well-structured REST endpoints, and deliver a polished React frontend capable of creating projects,
-            joining via access code, managing tasks, viewing team members, and generating AI-assisted project plans.
-            The system also needed to run smoothly on Render and operate reliably in cloud environments with production
-            constraints such as CORS, SSL requirements, and environment-specific configuration.
-          </li>
+    <!-- --- HERO --------------------------------------------------------------- -->
+    <section id="hero">
+      <div class="hero-inner">
+        <p class="hero-greeting">// Hello, world!</p>
+        <h1 class="hero-name">
+          <span class="word">Phong</span><span class="word">Truong</span>
+        </h1>
+        <p class="hero-role">Software Engineering Apprentice @ <strong>HP</strong></p>
+        <p class="hero-tagline">
+          Former healthcare professional turned full-stack engineer - building intuitive,
+          user-focused software that makes a real difference. Currently delivering production
+          features on HP's Field Service Mobile App team.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">View My Projects ↓</a>
+          <a href="#about" class="btn-outline">About Me</a>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="scroll-label">scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
 
-          <li>
-            <b>Task:</b>
-            My role was to implement several of the most important backend and frontend features in the system.
-            This included building core API endpoints for users, teams, and tasks; creating the access-code collaboration
-            flow; developing validation and authorization middleware; setting up database models and associations;
-            integrating the frontend with the backend; implementing the project dashboard; 
-            and fixing deployment issues so the application would successfully run in production.
-          </li>
+    <!-- --- ABOUT --------------------------------------------------------------- -->
+    <section id="about">
+      <div class="container">
+        <span class="section-label reveal">/ About</span>
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="section-divider reveal"></div>
 
-          <li>
-            <b>Action:</b>
-            <ul>
-              <li>
-                Implemented the <b>Users, Teams, Tasks, and TeamMembers</b> backend systems using Express and Sequelize,
-                including routes, controllers, validation middleware, and relational database structures.
-              </li>
-              <li>
-                Built the <b>access code system</b> for creating teams, generating unique codes, and joining projects,
-                including backend logic, utility functions, and frontend UI flows for entering and validating codes.
-              </li>
-              <li>
-                Developed <b>reusable validation middleware</b> for tasks, teams, and users—enforcing data integrity,
-                structured error messages, valid IDs, length checks, and enum validation.
-              </li>
-              <li>
-                Added <b>role-aware membership logic</b> through a Sequelize join table and corresponding authorization
-                middleware to prepare the system for an expandable permission model.
-              </li>
-              <li>
-                Built major frontend pages, including <i>Create Project</i>, <i>Join Project</i>, and the full
-                <i>Project Dashboard</i> with task lists, team lists, modals, access code display, and responsive UI.
-              </li>
-              <li>
-                Created a <b>centralized API wrapper</b> handling JSON parsing, fetch errors, and environment-based URLs
-                to ensure consistent communication between frontend and backend.
-              </li>
-              <li>
-                Resolved multiple <b>deployment and CI/CD issues</b>, updated Dockerfile and CORS configs, fixed Render
-                environment mismatches, and ensured the backend's health check and production DB settings worked properly.
-              </li>
-            </ul>
-          </li>
+        <div class="about-grid">
+          <div class="about-body">
+            <p>
+              Hi, I'm Phong Truong - a former healthcare professional turned Software
+              Engineering Apprentice. For over 10 years, I worked in healthcare, where I witnessed
+              firsthand how technology can improve and save lives: streamlining patient care,
+              enhancing data accuracy, and making critical systems more reliable. That exposure
+              sparked a deep curiosity about how software actually works behind the scenes -
+              the logic, the problem-solving, the endless possibilities of how to improve the existing
+              technologies to better serve people.
+            </p>
+            <p>
+              After a decade in that world, I decided to follow that curiosity full-time. I wanted
+              to move from being a user of technology to someone who builds and shapes it. Joining
+              my Apprenticeship at HP and the Multiverse Software Engineering Bootcamp felt like the
+              perfect next step - a structured, hands-on way to transition into tech while
+              contributing real value from day one.
+            </p>
+            <p>
+              Outside of code, I love to travel and explore new places with my wife and young
+              daughter - those moments of discovery keep me grounded and inspired. When I'm
+              not out and about, you'll find me unwinding with chess or strategy-heavy games like
+              <em>Civilization VI</em> or <em>Tropico 6</em>. The long-term planning, resource management,
+              and outthinking of complex systems all translate surprisingly well to
+              debugging, architecture decisions, and building scalable software.
+            </p>
+            <p>
+              I'm passionate about creating clean, efficient, and user-focused software that
+              solves real problems. Over the course of my Multiverse apprenticeship at HP, I've
+              grown significantly as a developer - delivering meaningful contributions to my team,
+              mastering front-end concepts, and gaining hands-on experience with the full development
+              cycle. As I prepare to transition into a full-time Software Engineer role at HP, I'm
+              eager to continue building on this foundation and tackle more complex challenges.
+            </p>
+          </div>
 
-          <li>
-            <b>Result:</b>
-            Plan Pilot became a fully operational cloud-deployed application where users can create collaborative
-            projects, join via access code, manage tasks and team members, and generate intelligent project plans using AI.
-            Thanks to the backend structure, validation layers, relational models, and front-end integration I implemented,
-            the system runs smoothly across environments and presents a polished, intuitive user experience. My 
-            contributions were central to enabling the project creation flow, team joining functionality, dashboard UI,
-            data validation, backend reliability, and successful deployment—demonstrating my ability to build and ship
-            full-stack applications that are maintainable, scalable, and production-ready.
-          </li>
+          <aside class="about-highlights">
+            <div class="highlight-card reveal">
+              <div class="hc-title">Production Impact</div>
+              <div class="hc-text">Features shipped every 2 sprint cycles to HP's Field Service Mobile App - used by field engineers worldwide.</div>
+            </div>
+            <div class="highlight-card reveal">
+              <div class="hc-title">Full-Stack Projects</div>
+              <div class="hc-text">5 projects spanning React, Node.js, TypeScript, PostgreSQL, Docker & more.</div>
+            </div>
+            <div class="highlight-card reveal">
+              <div class="hc-title">Healthcare → Tech</div>
+              <div class="hc-text">10+ years in healthcare before transitioning to software engineering - bringing empathy and precision to every line of code.</div>
+            </div>
+          </aside>
+        </div>
 
-        </ul>
-      </li>
-      <li>
-      <b>Takeaways:</b>
-      <ul>
-        <li>Strengthened full-stack development skills by building and connecting backend REST endpoints with a responsive React frontend using a clean, reusable API client.</li>
-        <li>Gained practical experience designing relational data models with Sequelize—defining associations, enforcing validations, and returning structured responses that simplify frontend consumption.</li>
-        <li>Improved backend architecture discipline by implementing middleware for validation, access checks, error handling, and environment-aware configuration.</li>
-        <li>Learned deployment-ready backend practices, including SSL configuration for hosted databases, CORS allowlists, health checks, and troubleshooting issues that surfaced only in production.</li>
-        <li>Sharpened problem-solving skills by debugging end-to-end issues across both the UI and API—such as access-code lookups, task updates, route mismatches, and environment variable handling.</li>
-        <li>Gained confidence integrating external services by implementing Gemini for AI-generated project summaries and handling failure paths gracefully.</li>
-        <li>Developed stronger frontend engineering habits by building reusable UI components, modal workflows, and styled-components layouts that are clean, accessible, and easy to maintain.</li>
-        <li>Reinforced collaboration and version-control workflows through focused PRs, multi-file changes, merge conflict resolution, and maintaining clear communication across the team.</li>
-      </ul>
-    </li>
-    </ul>
-    <h4>Could include:</h4>
-    <ul>
-      <li>Link to deployed version and/or presentation recording</li>
-      <li><a href="https://www.youtube.com/watch?v=leLso3X92K8">Plan Pilot Presentation</a></li>
-      <li>Architectural diagrams and/or wireframes</li>
-      <li>Screenshots and/or GIFs</li>
-    </ul>
+      </div>
+    </section>
+
+    <!-- --- EXPERIENCE --------------------------------------------------------- -->
+    <section id="experience">
+      <div class="container">
+        <span class="section-label reveal">/ Experience</span>
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="section-divider reveal"></div>
+
+        <div class="exp-card reveal">
+          <div class="exp-header">
+            <div>
+              <div class="exp-company">HP</div>
+              <div class="exp-role">Software Engineering Apprentice</div>
+              <div class="exp-team">Field Service Mobile App - Frontend Focus</div>
+            </div>
+            <div class="exp-period">Jan 2025 - Present</div>
+          </div>
+
+          <div class="exp-section-title">Contributions & Impact</div>
+          <div class="exp-bullets">
+            <div class="exp-bullet">
+              <div class="exp-bullet-dot"></div>
+              <p><strong>Production Deployments:</strong> Code shipped every 2 sprint cycles - frontend enhancements and bug fixes that go live directly into the FSM app, improving daily workflows for field technicians worldwide.</p>
+            </div>
+            <div class="exp-bullet">
+              <div class="exp-bullet-dot"></div>
+              <p><strong>Simplified Agenda View:</strong> Designed and implemented a compact work-order card layout, now adopted as the default work order view across the FSM app - reducing cognitive load and speeding up job handling for technicians in the field.</p>
+            </div>
+            <div class="exp-bullet">
+              <div class="exp-bullet-dot"></div>
+              <p><strong>Agile Collaboration:</strong> Worked cross-functionally with designers, frontend, backend, QA, and product owners through sprint planning, code reviews, stand-ups, and demo cycles to deliver iterative improvements.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- --- PROJECTS ----------------------------------------------------------- -->
+    <section id="projects">
+      <div class="container">
+        <span class="section-label reveal">/ Projects</span>
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="section-divider reveal"></div>
+
+        <div class="carousel" id="projects-carousel">
+        
+                  <!-- Carousel controls -->
+                  <div class="carousel-header">
+                    <div class="carousel-dots" role="tablist" aria-label="Project navigation">
+                      <button class="carousel-dot active" data-index="0" aria-label="Inventory App"></button>
+                      <button class="carousel-dot" data-index="1" aria-label="Cashflow Guru"></button>
+                      <button class="carousel-dot" data-index="2" aria-label="Wish Granting API"></button>
+                      <button class="carousel-dot" data-index="3" aria-label="Medieval Times"></button>
+                      <button class="carousel-dot" data-index="4" aria-label="Plan Pilot"></button>
+                    </div>
+                  </div>
+        
+                  <!-- Slide track + sticky arrows -->
+                  <div class="carousel-body">
+                    <button class="carousel-btn carousel-prev" aria-label="Previous project">←</button>
+                    <div class="carousel-track-wrap">
+                    <div class="carousel-track" id="carousel-track">
+        
+                      <!-- ── Slide 1: Inventory App ─────────────────────────────── -->
+                      <div class="carousel-slide" id="proj-inventory">
+                        <div class="slide-eyebrow">
+                          <div class="slide-eyebrow-left">
+                            <span class="slide-num">01</span>
+                          </div>
+                          <div class="slide-links">
+                            <a href="https://github.com/DJP-SWE2526/inventory-app" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+                            <a href="https://www.youtube.com/watch?v=MFk8Emz2Ixg" target="_blank" rel="noopener" class="project-link">Demo ▶</a>
+                          </div>
+                        </div>
+                        <h3 class="slide-name">Inventory Application</h3>
+                        <p class="slide-desc">
+                          A full-stack inventory management tool built with React, Express, and SQLite/Sequelize.
+                          Implements complete CRUD functionality, search filtering, and input validation,
+                          developed collaboratively via GitHub PR workflows.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">React</span>
+                          <span class="tech-tag">Express</span>
+                          <span class="tech-tag">SQLite</span>
+                          <span class="tech-tag">Sequelize</span>
+                          <span class="tech-tag">Jest/Supertest</span>
+                          <span class="tech-tag">MUI</span>
+                        </div>
+                        <div class="slide-columns">
+                          <div class="slide-col">
+                            <div class="slide-section-title">Key Features</div>
+                            <dl class="feature-list">
+                              <dt>View All & Single Item</dt>
+                              <dd>Displays all items with name, description, price, category, and image; single item pages show full details.</dd>
+                              <dt>Add Item</dt>
+                              <dd>React form with validation; submits POST requests to create new items with instant UI updates.</dd>
+                              <dt>Delete & Update</dt>
+                              <dd>DELETE request to remove items; pre-filled PATCH form for editing with front-end and back-end validation.</dd>
+                              <dt>Search & Filter</dt>
+                              <dd>Search bar for filtering items by name or category on the client side.</dd>
+                            </dl>
+                          </div>
+                          <div class="slide-col">
+                            <div class="slide-section-title">My Contributions</div>
+                            <ul class="detail-list">
+                              <li>Implemented Tier 1 front-end view for a single item</li>
+                              <li>Built Tier 2 "Add item" form and POST /items Express route with a reusable validateItem function</li>
+                              <li>Expanded Sequelize model to include a quantity field with validation and default values</li>
+                              <li>Added Search, Quantity handling, and client-side validation features</li>
+                              <li>Fixed bugs and iterated via multiple focused PRs</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">STAR Story</div>
+                        <div class="star-grid">
+                          <div class="star-block">
+                            <div class="star-label">Situation</div>
+                            <p>Team was tasked with rebuilding an inventory management system as a full-stack React and Express/Sequelize application requiring reliable CRUD and user-friendly features.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Task</div>
+                            <p>Implement core features connecting front-end and back-end - Add/Edit Item flows, quantity handling, search functionality, input validation, and PR-driven improvements.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Action</div>
+                            <p>Built React components, implemented CRUD routes, added reusable server-side validation, and expanded Sequelize models. Delivered changes through clear, incremental PRs.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Result</div>
+                            <p>Fully functional full-stack workflow with reliable item creation, updating, validation, and searching. Improved stability, data integrity, and usability across the app.</p>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">Key Takeaways</div>
+                        <ul class="detail-list">
+                          <li>Strengthened full-stack engineering by delivering tightly integrated React front-end features with Express/Sequelize APIs</li>
+                          <li>Learned the value of incremental tier-based delivery to maintain code quality and project momentum</li>
+                          <li>Gained experience collaborating on a shared codebase - coordinating features through structured PRs, rebases, and iterative code reviews</li>
+                        </ul>
+                      </div>
+        
+                      <!-- ── Slide 2: Cashflow Guru ─────────────────────────────── -->
+                      <div class="carousel-slide" id="proj-cashflow">
+                        <div class="slide-eyebrow">
+                          <div class="slide-eyebrow-left">
+                            <span class="slide-num">02</span>
+                          </div>
+                          <div class="slide-links">
+                            <a href="https://github.com/PhongT06/cashflow-guru" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+                            <a href="https://www.youtube.com/watch?v=0B7qN8ONbtM" target="_blank" rel="noopener" class="project-link">Demo ▶</a>
+                            <a href="https://cashflow-guru.netlify.app/" target="_blank" rel="noopener" class="project-link">Live ↗</a>
+                          </div>
+                        </div>
+                        <h3 class="slide-name">Cashflow Guru - Final Bootcamp Project</h3>
+                        <p class="slide-desc">
+                          A full-stack personal finance application that goes beyond passive expense tracking by
+                          delivering actionable, AI-powered financial guidance - built end-to-end solo with TypeScript,
+                          React, Node.js/Express, and Prisma ORM.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">TypeScript</span>
+                          <span class="tech-tag">React</span>
+                          <span class="tech-tag">Node.js/Express</span>
+                          <span class="tech-tag">Prisma</span>
+                          <span class="tech-tag">Google Gemini API</span>
+                          <span class="tech-tag">npm workspaces</span>
+                        </div>
+                        <div class="slide-columns">
+                          <div class="slide-col">
+                            <div class="slide-section-title">Key Features</div>
+                            <dl class="feature-list">
+                              <dt>Dashboard</dt>
+                              <dd>Monthly income summary, total expenses, debt balance, savings progress, and cash flow snapshot with key metrics visualizations.</dd>
+                              <dt>CRUD Tracking</dt>
+                              <dd>Add, view, edit, and delete income sources and categorized expense entries with real-time dashboard updates.</dd>
+                              <dt>Debt & Savings Goals</dt>
+                              <dd>Input debt details (balance, interest rate, minimum payment) and savings targets, persisted via Prisma.</dd>
+                              <dt>AI Advice Engine</dt>
+                              <dd>Button-triggered analysis generating tailored advice via Google Gemini - debt payoff strategies, expense cut suggestions, accelerated savings plans.</dd>
+                            </dl>
+                          </div>
+                          <div class="slide-col">
+                            <div class="slide-section-title">Purpose & Goals</div>
+                            <p class="slide-purpose">Address limitations in traditional budgeting tools by providing personalized, actionable guidance for debt payoff and savings acceleration. Users input income, expenses, debt obligations, and savings goals - then receive tailored recommendations powered by Google Gemini AI.</p>
+                            <p class="slide-purpose" style="margin-top:10px;font-size:0.82rem;color:var(--gold);font-family:var(--font-mono);opacity:0.8;">Solo end-to-end ownership - design to deployment.</p>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">STAR Story</div>
+                        <div class="star-grid">
+                          <div class="star-block">
+                            <div class="star-label">Situation</div>
+                            <p>Final bootcamp capstone: build a full-stack personal finance app requiring reliable data persistence, user-friendly input flows, financial calculations, and external AI integration - solo.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Task</div>
+                            <p>End-to-end ownership: design Prisma schema, build RESTful APIs for CRUD, create React components for input and visualization, and integrate Google Gemini for personalized advice.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Action</div>
+                            <p>Designed Prisma models, built Express CRUD routes with validation, developed typed React components with hooks, integrated Gemini API, and handled async calls, error cases, and secure key management.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Result</div>
+                            <p>Functional full-stack app that reliably tracks finances, generates intelligent personalized advice, and provides a responsive interface - demonstrating complete end-to-end solo engineering ownership.</p>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">Key Takeaways</div>
+                        <ul class="detail-list">
+                          <li>Deepened full-stack TypeScript proficiency end-to-end: React, Node/Express, Prisma</li>
+                          <li>Gained hands-on mastery of Prisma ORM - schema design, migrations, relations, efficient querying</li>
+                          <li>Strengthened integration skills: secure API key management, async handling, error resilience</li>
+                          <li>Built confidence with end-to-end solo project ownership from setup to polished UX</li>
+                        </ul>
+                      </div>
+        
+                      <!-- ── Slide 3: Wish Granting API ─────────────────────────── -->
+                      <div class="carousel-slide" id="proj-wish">
+                        <div class="slide-eyebrow">
+                          <div class="slide-eyebrow-left">
+                            <span class="slide-num">03</span>
+                          </div>
+                          <div class="slide-links">
+                            <a href="https://github.com/FairyOddTeam/The-Wish-Granting-API" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+                            <a href="https://www.youtube.com/watch?v=psR3YDZe-sY" target="_blank" rel="noopener" class="project-link">Demo ▶</a>
+                          </div>
+                        </div>
+                        <h3 class="slide-name">The Wish Granting API - Back-End Module</h3>
+                        <p class="slide-desc">
+                          A secure, feature-rich RESTful API with JWT authentication, Google OAuth 2.0, role-based
+                          access control, and Gemini AI-generated wish outcomes - inspired by The Fairly OddParents.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">Node.js/Express</span>
+                          <span class="tech-tag">Sequelize/SQLite</span>
+                          <span class="tech-tag">JWT</span>
+                          <span class="tech-tag">Google OAuth 2.0</span>
+                          <span class="tech-tag">Gemini AI</span>
+                          <span class="tech-tag">Jest/Supertest</span>
+                        </div>
+                        <div class="slide-columns">
+                          <div class="slide-col">
+                            <div class="slide-section-title">Key Features</div>
+                            <dl class="feature-list">
+                              <dt>Auth</dt>
+                              <dd>Local JWT + Google OAuth 2.0 with Passport; both flows issue signed JWTs for protected routes.</dd>
+                              <dt>CRUD for Wishes</dt>
+                              <dd>Full CRUD with categories (fun/practical/chaotic), user ownership, and relational User data in responses.</dd>
+                              <dt>Fairy Management</dt>
+                              <dd>Admin-only CRUD for Fairies with a requireAdmin middleware guard.</dd>
+                              <dt>RBAC</dt>
+                              <dd>Basic users manage only their own wishes; admins manage all resources. Clear 401/403/400 error semantics.</dd>
+                              <dt>AI Wish Outcomes</dt>
+                              <dd>Gemini API generates ironic, humorous magical outcomes in the style of The Fairly OddParents.</dd>
+                            </dl>
+                          </div>
+                          <div class="slide-col">
+                            <div class="slide-section-title">My Contributions</div>
+                            <ul class="detail-list">
+                              <li>Full CRUD for Wishes: model, routes, validation, category support, and relational User data in responses</li>
+                              <li>Category-based filtering with safe validation for invalid categories</li>
+                              <li>Fairy CRUD: model, routes, admin-only protection, User associations</li>
+                              <li>Built reusable WishAPI frontend client: auth headers, token storage, error handling, helper methods</li>
+                              <li>Dashboard, Wishes, and Fairies frontend pages - role-aware UI behavior</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">STAR Story</div>
+                        <div class="star-grid">
+                          <div class="star-block">
+                            <div class="star-label">Situation</div>
+                            <p>Build a secure API supporting auth, RBAC, multiple resource types (Wishes, Fairies, Users), and optional AI-generated wish outcomes - while serving a frontend client.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Task</div>
+                            <p>Implement major backend features (CRUD for Wishes/Fairies, category filtering, validation) and build the frontend integration layer for authenticated, role-aware data rendering.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Action</div>
+                            <p>Built Wishes CRUD, Fairy CRUD, category filtering, WishAPI frontend utility class, dashboard pages, and delivered PR-focused incremental features through tier-based milestones.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Result</div>
+                            <p>Secure, stable, role-aware API with functional CRUD, seamless frontend integration, and Gemini-driven wish outcomes. Users can sign in, manage wishes, view filtered lists, and interact with fairies.</p>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">Key Takeaways</div>
+                        <ul class="detail-list">
+                          <li>Gained practical experience implementing JWT, Google OAuth, and RBAC authorization patterns</li>
+                          <li>Improved Sequelize modeling discipline with enums, associations, and 4xx error semantics</li>
+                          <li>Strengthened full-stack ownership by building complete resource flows from model and route to validation and frontend integration</li>
+                        </ul>
+                      </div>
+        
+                      <!-- ── Slide 4: Medieval Times ────────────────────────────── -->
+                      <div class="carousel-slide" id="proj-medieval">
+                        <div class="slide-eyebrow">
+                          <div class="slide-eyebrow-left">
+                            <span class="slide-num">04</span>
+                          </div>
+                          <div class="slide-links">
+                            <a href="https://github.com/DustinAndPhongFrontend/frontend-project" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+                            <a href="https://www.youtube.com/watch?v=6ken1cwg0pk" target="_blank" rel="noopener" class="project-link">Demo ▶</a>
+                          </div>
+                        </div>
+                        <h3 class="slide-name">Medieval Times - Front-End Module</h3>
+                        <p class="slide-desc">
+                          An immersive RPG-style Next.js application with drag-and-drop inventory, quest systems,
+                          character progression, persistent state, and animations - built with TypeScript,
+                          Context + Reducer, and thoroughly tested with Vitest and Playwright.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">Next.js</span>
+                          <span class="tech-tag">TypeScript</span>
+                          <span class="tech-tag">@dnd-kit</span>
+                          <span class="tech-tag">React Spring</span>
+                          <span class="tech-tag">TailwindCSS</span>
+                          <span class="tech-tag">Vitest</span>
+                          <span class="tech-tag">Playwright</span>
+                        </div>
+                        <div class="slide-columns">
+                          <div class="slide-col">
+                            <div class="slide-section-title">Key Features</div>
+                            <dl class="feature-list">
+                              <dt>Drag-and-Drop Inventory</dt>
+                              <dd>Interactive grid and equipment slots built with dnd-kit, supporting mouse, touch, and keyboard sensors with slot acceptance rules.</dd>
+                              <dt>Quest System</dt>
+                              <dd>Message Board with rotating quests, card-flip UI, accept/decline workflows; Quest Log with Active/Completed tabs, detail modal, and completion flow.</dd>
+                              <dt>Quest Reward Engine</dt>
+                              <dd>Parses reward strings, injects items into inventory, calculates XP, and triggers level-ups with stat increases.</dd>
+                              <dt>Persistent State</dt>
+                              <dd>Full game state serialized to local storage for save-file persistence across reloads.</dd>
+                              <dt>Animated Completion Modal</dt>
+                              <dd>React Spring staggered reveal for gold, items, and level-up updates.</dd>
+                            </dl>
+                          </div>
+                          <div class="slide-col">
+                            <div class="slide-section-title">My Contributions</div>
+                            <ul class="detail-list">
+                              <li>Quest System Foundation: Message Board, quest rotation, card-flip UI, accept/decline logic</li>
+                              <li>Quest Log UI with Active/Completed tabs, responsive card grid, and modal view</li>
+                              <li>Items database (100+ typed JSON entries) and reward parsing + item lookup utilities</li>
+                              <li>Quest Completion Engine: gold, items, XP/level logic integrated into reducer</li>
+                              <li>Animated Quest Completion modal with React Spring staggered reveals</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">STAR Story</div>
+                        <div class="star-grid">
+                          <div class="star-block">
+                            <div class="star-label">Situation</div>
+                            <p>Build a fully interactive RPG front-end combining inventory management, quest progression, character stats, animations, and persistent state - using Next.js and TypeScript with professional engineering practices.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Task</div>
+                            <p>Architect and implement the quest board, quest log, reward engine, items database, and complete quest completion flow - plus navigation, state persistence, and animations.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Action</div>
+                            <p>Built Message Board system, Quest Log, items database + reward parsing utilities, Quest Completion Engine, animated completion modal, responsive header/navbar, and contributed Vitest + Playwright tests.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Result</div>
+                            <p>Polished, immersive RPG experience - users can equip items via drag-and-drop, accept and complete quests, gain rewards and levels, view animated progression, and maintain persistent state across sessions.</p>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">Key Takeaways</div>
+                        <ul class="detail-list">
+                          <li>Strengthened front-end architecture by building a multi-component system with reducers, context, typed models, and drag-and-drop</li>
+                          <li>Learned to build for accessibility and responsiveness with keyboard-based DnD, mobile navigation, and inclusive modal interactions</li>
+                          <li>Built confidence creating polished interactive interfaces blending engineering patterns with thoughtful design</li>
+                        </ul>
+                      </div>
+        
+                      <!-- ── Slide 5: Plan Pilot (Featured) ────────────────────── -->
+                      <div class="carousel-slide" id="proj-planpilot">
+                        <div class="slide-eyebrow">
+                          <div class="slide-eyebrow-left">
+                            <span class="slide-num">05</span>
+                          </div>
+                          <div class="slide-links">
+                            <a href="https://github.com/Team-PlanPilot/PlanPilot" target="_blank" rel="noopener" class="project-link">GitHub ↗</a>
+                            <a href="https://www.youtube.com/watch?v=leLso3X92K8" target="_blank" rel="noopener" class="project-link">Demo ▶</a>
+                          </div>
+                        </div>
+                        <h3 class="slide-name">Plan Pilot - Deployment Module</h3>
+                        <p class="slide-desc">
+                          A production-deployed, full-stack project management app - teams create projects, share
+                          unique access codes to invite collaborators, manage tasks, and generate AI-assisted project
+                          plans via Gemini. Deployed on Render with PostgreSQL, Docker, SSL, and CORS config for
+                          cloud readiness.
+                        </p>
+                        <div class="tech-tags">
+                          <span class="tech-tag">React</span>
+                          <span class="tech-tag">Node.js/Express</span>
+                          <span class="tech-tag">PostgreSQL</span>
+                          <span class="tech-tag">Sequelize</span>
+                          <span class="tech-tag">styled-components</span>
+                          <span class="tech-tag">Docker</span>
+                          <span class="tech-tag">Render</span>
+                          <span class="tech-tag">Gemini AI</span>
+                        </div>
+                        <div class="slide-columns">
+                          <div class="slide-col">
+                            <div class="slide-section-title">Key Features</div>
+                            <dl class="feature-list">
+                              <dt>Access Code Collaboration</dt>
+                              <dd>Unique randomized project codes - share with teammates to instantly join with no password friction.</dd>
+                              <dt>Tasks System</dt>
+                              <dd>Full CRUD with status, priority, difficulty, estimated time, and modal-based creation UI.</dd>
+                              <dt>AI Project Plan</dt>
+                              <dd>Compiles tasks and team members into a Gemini prompt to generate a summary, suggested timeline, and delegation recommendations.</dd>
+                              <dt>Deployment-Ready</dt>
+                              <dd>SSL for production Postgres, CORS allowlists, health checks, Docker builds for Render.</dd>
+                              <dt>Project Dashboard</dt>
+                              <dd>View all your teams and projects at a glance with live task counts and team membership summaries.</dd>
+                            </dl>
+                          </div>
+                          <div class="slide-col">
+                            <div class="slide-section-title">My Contributions</div>
+                            <ul class="detail-list">
+                              <li>Foundational backend: Users, Teams, Tasks, TeamMembers Sequelize models, routes, controllers, and validation middleware</li>
+                              <li>Access code system - generate, validate, and join teams end-to-end</li>
+                              <li>Docker + Docker Compose, env-specific DB config, health check endpoints, and full Render deployment resolution</li>
+                              <li>Centralized API wrapper handling fetch, error parsing, JSON safety, and env-based base URLs</li>
+                              <li>Production CORS allowlist, PostgreSQL SSL settings, and environment variable alignment for Render</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">STAR Story</div>
+                        <div class="star-grid">
+                          <div class="star-block">
+                            <div class="star-label">Situation</div>
+                            <p>Build a fully functional, deployment-ready full-stack app supporting collaborative project management - running on Render with production constraints (CORS, SSL, env config).</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Task</div>
+                            <p>Implement core API endpoints, access-code collaboration flow, validation/auth middleware, data models, frontend integration, project dashboard, and fix deployment issues for production.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Action</div>
+                            <p>Built full backend with Sequelize + Express, implemented the access code flow, wrote reusable validation middleware, created a polished React frontend, and built a centralized API client.</p>
+                          </div>
+                          <div class="star-block">
+                            <div class="star-label">Result</div>
+                            <p>Fully operational cloud-deployed app - teams create projects, join via code, manage tasks, and generate AI project plans. Runs smoothly across environments with a polished, intuitive UX.</p>
+                          </div>
+                        </div>
+                        <div class="slide-divider"></div>
+                        <div class="slide-section-title">Key Takeaways</div>
+                        <ul class="detail-list">
+                          <li>End-to-end production deployment experience: Docker, Render, PostgreSQL SSL, environment management</li>
+                          <li>Strengthened full-stack TypeScript and Node/Express architecture under real deployment constraints</li>
+                          <li>Learned cross-team integration: managing shared state, access control, and data consistency at scale</li>
+                        </ul>
+                      </div>
+        
+                    </div>
+                  </div>
+                    <button class="carousel-btn carousel-next" aria-label="Next project">→</button>
+                  </div>
+        
+                </div>
+
+      </div>
+    </section>
+
+    <!-- --- FOOTER --------------------------------------------------------------- -->
+    <footer>
+      <div class="footer-name">Phong Truong</div>
+      <div class="footer-sub">Software Engineer · HP · Multiverse Bootcamp Jan. 2025 - April 2026</div>
+
+      <div class="footer-projects">
+        <div class="footer-project">
+          <a href="https://github.com/DJP-SWE2526/inventory-app" target="_blank" rel="noopener">Inventory App ↗</a>
+          <a href="https://www.youtube.com/watch?v=MFk8Emz2Ixg" target="_blank" rel="noopener">▶ Demo</a>
+        </div>
+        <div class="footer-project">
+          <a href="https://github.com/PhongT06/cashflow-guru" target="_blank" rel="noopener">Cashflow Guru ↗</a>
+          <a href="https://www.youtube.com/watch?v=0B7qN8ONbtM" target="_blank" rel="noopener">▶ Demo</a>
+        </div>
+        <div class="footer-project">
+          <a href="https://github.com/FairyOddTeam/The-Wish-Granting-API" target="_blank" rel="noopener">Wish Granting API ↗</a>
+          <a href="https://www.youtube.com/watch?v=psR3YDZe-sY" target="_blank" rel="noopener">▶ Demo</a>
+        </div>
+        <div class="footer-project">
+          <a href="https://github.com/DustinAndPhongFrontend/frontend-project" target="_blank" rel="noopener">Medieval Times ↗</a>
+          <a href="https://www.youtube.com/watch?v=6ken1cwg0pk" target="_blank" rel="noopener">▶ Demo</a>
+        </div>
+        <div class="footer-project">
+          <a href="https://github.com/Team-PlanPilot/PlanPilot" target="_blank" rel="noopener">Plan Pilot ↗</a>
+          <a href="https://www.youtube.com/watch?v=leLso3X92K8" target="_blank" rel="noopener">▶ Demo</a>
+        </div>
+      </div>
+
+      <div class="footer-copy">© 2026 Phong Truong · Built during Multiverse Apprenticeship @ HP</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
